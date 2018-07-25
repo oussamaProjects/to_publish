@@ -122,6 +122,11 @@ class To_publish {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-to_publish-public.php';
 
+		/**
+		 * include CMB2 
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cmb2-functions.php';
+
 		$this->loader = new To_publish_Loader();
 
 	}
