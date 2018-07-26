@@ -1,0 +1,113 @@
+
+.annoce_container{
+	max-width: 100%;
+	width: 100%;
+	// margin-bottom: oe_rem(10px); 
+
+	.annoce{
+		// height: oe_rem(225px); 
+		position: relative;
+		overflow: hidden;
+		&:after{
+			content: "";
+			background-image: url('./img/icons/annonce_loop.png');
+			background-repeat: no-repeat;
+			height: oe_rem(42px);
+			width: oe_rem(42px);
+			opacity: 0;
+			@include position(absolute, 50%, 50%, initial, initial);
+			@include transition(opacity, .25s, ease-in-out);
+			margin-top: oe_rem(-21px) ;
+			margin-right: oe_rem(-21px) ;
+		}
+		.hover{
+			cursor: pointer;
+			@include position(absolute, 0, 0, 0, 0);
+			background-color: rgba(255, 255, 255, .6);
+			opacity: 0;
+			transition: opacity .2s ease-in-out;
+		}
+		
+		.hover_2{
+			cursor: pointer;
+			@include position(absolute, 0, 0, 0, 0); 
+			opacity: .65;
+			transition: opacity .2s ease-in-out;
+		}
+		img{
+			min-height: 100%;
+			@include oe_box-shadow;
+		}
+	}
+
+	.info_container{
+		
+		.titre,
+		.price{
+			font-weight: 700; 
+			font-size: oe_rem(18px);
+			line-height: oe_rem(30px);
+		}
+		.titre{
+			padding: oe_rem(25px) oe_rem(0) oe_rem(10px);
+			height: oe_rem(95px);
+		}
+		.price{
+			padding: oe_rem(10px) oe_rem(0);
+			border-top: oe_rem(1px) solid $lighter_color;
+		}
+		.info{
+			font-weight: 600;
+			font-size: oe_rem(14px);
+			color: $main_text_color;
+			@include flex(center, space-between, row);
+			i{
+				color: $main_color;
+				padding-right: oe_rem(4px);
+			} 
+			img{
+				width: auto;
+				height: oe_rem(14px);
+				display: inline-block;
+				vertical-align: initial;
+				padding-right: oe_rem(4px);
+			}
+		}
+		
+		.localisation{
+			font-size: oe_rem(14px);
+			font-weight: 700;
+			text-align: center;
+			padding: oe_rem(15px) oe_rem(0);
+			height: oe_rem(100px);
+			span{
+				font-weight: 400;
+				display: block;
+			}
+		}
+	}
+	 
+	&:hover{  
+		.annoce{  
+			&:after{
+				opacity: 1;
+			}
+		}
+		.hover{
+			opacity: 1;
+		}
+		.hover_2{
+			opacity: 0;
+		}
+	}
+
+	@include media("<md"){
+		margin: oe_rem(10px) auto; 
+		border-radius: oe_rem(6px);
+		@include oe_box-shadow-light;
+		.annoce{ 
+			border-radius: oe_rem(6px) oe_rem(6px) 0 0; 
+		} 
+	}
+}
+

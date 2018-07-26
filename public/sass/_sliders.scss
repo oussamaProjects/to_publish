@@ -1,0 +1,36 @@
+.owl-carousel{
+  .owl-stage-outer{
+    padding: oe_rem(1px);
+  }
+  .owl-nav{
+    margin: 0 !important;
+    @include position(absolute, oe_rem(-45px), oe_rem(0), initial, initial);
+    @include flex(center, center, row);
+    margin: 0;
+    [class*='owl-'] { 
+      background: transparent !important; 
+      padding: 0 !important;
+      padding: oe_rem(2px) !important;
+      margin: oe_rem(3px) !important;
+      color: $lighter_color !important;
+      height: oe_rem(30px) !important;
+      width: oe_rem(30px) !important;
+      border-radius: 0 !important;
+      border: oe_rem(1px) solid $lighter_color !important;
+      @include flex(center, center, row);
+      @include transition(all , .2s, ease-in-out);
+      &:hover {
+        background: transparent;
+        color: $main_color !important;
+        border: oe_rem(1px) solid $main_color !important;
+      }
+    }
+  }
+
+  @include media("<md"){    
+    .owl-nav{
+        @include position(absolute, oe_rem(-45px), oe_rem(0), initial, initial);
+    }
+  }
+
+}
