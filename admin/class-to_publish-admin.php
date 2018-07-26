@@ -52,6 +52,9 @@ class To_publish_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+		// PARTIALS 
+		require_once plugin_dir_path( __FILE__ ) . 'partials/to_publish-functions.php';
+		require_once plugin_dir_path( __FILE__ ) . 'partials/to_publish-form.php';
 
 	}
 
