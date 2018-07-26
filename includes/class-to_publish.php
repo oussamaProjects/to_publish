@@ -126,6 +126,7 @@ class To_publish {
 		 * include CMB2 
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cmb2-functions.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cpt-annonces.php';
 
 		$this->loader = new To_publish_Loader();
 
