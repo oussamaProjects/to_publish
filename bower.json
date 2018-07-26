@@ -1,0 +1,28 @@
+{
+  "name": "tmz",
+  "description": "Creation of Tanger med zone's theme",
+  "main": "index.php",
+  "authors": [
+    "oussama"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "font-awesome": "fontawesome#^4.7.0",
+    "owl.carousel": "owl2#^0.1.0",
+    "include-media": "^1.4.9"
+  },
+  "devDependencies": {
+    "typed": "*",
+    "typed.js": "^2.0.6",
+    "font-awesome-5": "^5.0.13"
+  }
+}

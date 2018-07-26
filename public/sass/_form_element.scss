@@ -1,0 +1,49 @@
+.btn{
+	cursor:pointer;
+	font-size: oe_rem(18px);
+	font-weight: 700;
+	height: oe_rem(50px);
+	line-height: oe_rem(45px);
+	padding: 0 oe_rem(20px);
+	min-width: oe_rem(175px);
+	border-radius: oe_rem(2px);
+	border-width: 2px !important;
+}
+
+.custom-btn{  
+	input{
+		&[type="submit"]{
+			cursor:pointer;
+			font-size: oe_rem(18px);
+			font-weight: 700;
+			height: oe_rem(50px);
+			line-height: oe_rem(45px);
+			padding: 0 oe_rem(20px);
+			min-width: oe_rem(175px);
+			border-radius: oe_rem(2px);
+			border-width: 2px !important;
+			@include button-variant($btn-custom-color, $btn-custom-bg, $btn-custom-border);
+		}
+	}
+}
+
+.white-btn{ 
+	@include button-variant($white, transparent, $white);  
+}
+
+.submit-btn{  
+	input{
+		&[type="submit"]{
+			cursor:pointer;
+			font-size: oe_rem(18px);
+			font-weight: 700;
+			height: oe_rem(50px);
+			line-height: oe_rem(45px);
+			padding: 0 oe_rem(20px);
+			min-width: oe_rem(175px);
+			border-radius: oe_rem(2px);
+			border-width: 2px !important;
+			@include button-variant($btn-custom-color, $btn-custom-bg, $btn-custom-border);
+		}
+	}
+}

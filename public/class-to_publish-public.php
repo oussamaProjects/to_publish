@@ -52,6 +52,15 @@ class To_publish_Public {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+		
+		// PARTIALS 
+		require_once plugin_dir_path( __FILE__ ) . 'partials/to_publish-functions.php';
+		require_once plugin_dir_path( __FILE__ ) . 'partials/to_publish-form.php';
+		require_once plugin_dir_path( __FILE__ ) . 'partials/to_publish-save-form.php';
+		
+		// SHORTCODES
+		require_once plugin_dir_path( __FILE__ ) . 'shortcodes/to_publish-form.php';
+
 	}
 
 	/**
@@ -99,5 +108,8 @@ class To_publish_Public {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/to_publish-public.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+
+	
 
 }
