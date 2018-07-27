@@ -1,5 +1,5 @@
 <?php
-function cptui_register_my_cpts_annonce() {
+function to_publish_register_my_cpts_annonce() {
 
 	/**
 	 * Post Type: Annonces.
@@ -14,7 +14,8 @@ function cptui_register_my_cpts_annonce() {
 		"label" => __( "Annonces", "tanja-marina" ),
 		"labels" => $labels,
 		"description" => "",
-		"public" => true,
+      "public" => true,
+      'menu_icon'   => 'dashicons-megaphone',
 		"publicly_queryable" => true,
 		"show_ui" => true,
 		"show_in_rest" => false,
@@ -34,10 +35,10 @@ function cptui_register_my_cpts_annonce() {
 	register_post_type( "annonce", $args );
 }
 
-add_action( 'init', 'cptui_register_my_cpts_annonce' );
+add_action( 'init', 'to_publish_register_my_cpts_annonce' );
 
 
-function cptui_register_my_taxes_types() {
+function to_publish_register_my_taxes_types() {
 
 	/**
 	 * Taxonomy: Types.
@@ -67,9 +68,9 @@ function cptui_register_my_taxes_types() {
 	register_taxonomy( "types", array( "annonce" ), $args );
 }
 
-add_action( 'init', 'cptui_register_my_taxes_types' );
+add_action( 'init', 'to_publish_register_my_taxes_types' );
 
-function cptui_register_my_taxes_localisation() {
+function to_publish_register_my_taxes_localisation() {
 
 	/**
 	 * Taxonomy: Localisations.
@@ -99,4 +100,4 @@ function cptui_register_my_taxes_localisation() {
 	register_taxonomy( "localisation", array( "annonce" ), $args );
 }
 
-add_action( 'init', 'cptui_register_my_taxes_localisation' );
+add_action( 'init', 'to_publish_register_my_taxes_localisation' );
