@@ -92,6 +92,16 @@ function to_publish_frontend_form_register() {
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+        'name' => __( 'Surface', 'to_publish' ),
+        'id'   => 'submitted_surface',
+        'type' => 'text', 
+        'before_row'    => '<div class="container"><div class="row">',
+        'classes'       => 'col-md-8 offset-md-2',
+        'after_row'     => '</div></div>'
+    ) );
+
+    $cmb->add_field( array(
+		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
         'name'             => __( 'Number of rooms', 'to_publish' ),
         'id'               => 'submitted_rooms',
         'type'             => 'select',
@@ -123,8 +133,8 @@ function to_publish_frontend_form_register() {
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name' => __( 'Surface', 'to_publish' ),
-        'id'   => 'submitted_surface',
+        'name' => __( 'Price', 'to_publish' ),
+        'id'   => 'submitted_price',
         'type' => 'text', 
         'before_row'    => '<div class="container"><div class="row">',
         'classes'       => 'col-md-8 offset-md-2',

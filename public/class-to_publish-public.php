@@ -58,6 +58,7 @@ class To_publish_Public {
 		require_once plugin_dir_path( __FILE__ ) . 'partials/to_publish-form.php';
 		require_once plugin_dir_path( __FILE__ ) . 'partials/to_publish-save-form.php';
 		
+		
 		// SHORTCODES
 		require_once plugin_dir_path( __FILE__ ) . 'shortcodes/to_publish-slider-annonces.php';
 		require_once plugin_dir_path( __FILE__ ) . 'shortcodes/to_publish-form.php';

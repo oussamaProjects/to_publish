@@ -22,6 +22,15 @@ function to_publish_admin_annonces_form_register() {
     ) );
     
     $cmb->add_field( array(
+        'name' => __( 'Surface', 'to_publish' ),
+        'id'   => 'submitted_surface',
+        'type' => 'text',
+        'attributes'  => array( 
+            'required'    => 'required',
+        ),
+    ) );
+    
+    $cmb->add_field( array(
         'name'             => __( 'Number of rooms', 'to_publish' ),
         'id'               => 'submitted_rooms',
         'type'             => 'select',
@@ -45,6 +54,16 @@ function to_publish_admin_annonces_form_register() {
             '3' => 3,
         ),
     ) );
+
+    $cmb->add_field( array(
+        'name' => __( 'Price', 'to_publish' ),
+        'id'   => 'submitted_price',
+        'type' => 'text',
+        'attributes'  => array( 
+            'required'    => 'required',
+        ),
+    ) );
+    
     $cmb->add_field( array(
         'name' => __( 'Your Name*', 'to_publish' ),
         'id'   => 'submitted_author_name',
