@@ -13407,7 +13407,7 @@ form textarea {
 
 .btn {
   cursor: pointer;
-  font-size: 1.125rem;
+  font-size: 1.125rem !important;
   font-weight: 700;
   height: 3.125rem;
   line-height: 2.8125rem;
@@ -13520,6 +13520,38 @@ form textarea {
   background-color: rgba(0, 0, 0, 0);
   background-image: none;
   border-color: #013850;
+}
+
+.required_field {
+  color: #e0e0e0;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+#front-end-post-form .button-primary {
+  display: none;
+}
+
+.step {
+  padding: 2.75rem 0 1.75rem;
+}
+
+.btn-step {
+  width: 10.9375rem;
+  height: 2.5rem;
+  line-height: 2.1875rem;
+}
+
+.btn-step.next {
+  float: right;
+}
+
+.btn-step.prev {
+  float: left;
+}
+
+.hide_step {
+  display: none !important;
 }
 
 .owl-carousel .owl-stage-outer {
@@ -13857,7 +13889,7 @@ form textarea {
 }
 
 .cmb2-wrap .custom_checkbox .cmb2-radio-list li input {
-  width: 14.6875rem;
+  width: 18.125rem;
   height: 3.125rem;
   color: #01628d;
   float: left;
@@ -13885,7 +13917,7 @@ form textarea {
   display: inline-block;
   height: 3.125rem;
   line-height: 3.125rem;
-  width: 14.6875rem;
+  width: 18.125rem;
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -13899,7 +13931,7 @@ form textarea {
 .cmb2-wrap .custom_checkbox .cmb2-radio-list li input[type=radio][class*=cmb2-option]:checked + label {
   color: white;
   background-color: #01628d;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
 }
 
 .cmb2-wrap .custom_checkbox .cmb2-radio-list li input[type=checkbox][class*=cmb2-option]:checked + label:before,
@@ -13910,7 +13942,7 @@ form textarea {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -13944,6 +13976,7 @@ form textarea {
 }
 
 .cmb-row {
+  margin-bottom: 0.25rem;
   padding-bottom: 1rem;
 }
 
@@ -14161,7 +14194,6 @@ span.cmb2-metabox-description {
 
 .cmb-type-title {
   height: 6.25rem;
-  margin: 2.75rem 0 3.75rem;
   background-color: #f0f0f0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }

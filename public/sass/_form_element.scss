@@ -56,7 +56,7 @@ form{
 
 .btn{
 	cursor:pointer;
-	font-size: oe_rem(18px);
+	font-size: oe_rem(18px) !important;
 	font-weight: 700;
 	height: oe_rem(50px);
 	line-height: oe_rem(45px);
@@ -102,4 +102,36 @@ form{
 			@include button-variant($btn-custom-color, $btn-custom-bg, $btn-custom-border);
 		}
 	}
+}
+
+.required_field{
+	color: $lighter_color;
+	font-size: oe_rem(14px);
+	font-style: italic;
+}
+
+#front-end-post-form{
+	.button-primary{
+		display: none;
+	}
+}
+
+.step{
+	padding: oe_rem(44px) 0 oe_rem(28px);
+}
+
+.btn-step{
+	width: oe_rem(175px);
+	height: oe_rem(40px);
+	line-height: oe_rem(35px);
+	&.next{
+		float: right;
+	}
+	&.prev{
+		float: left;
+	}
+}
+
+.hide_step{
+	display: none !important;
 }

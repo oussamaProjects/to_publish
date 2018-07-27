@@ -19,7 +19,8 @@ function to_publish_frontend_form_register() {
         'id'   => 'request_title',
         'before'        => '<div class="container"><div class="row"><div class="col-md-12">',
         'classes'       => '',
-        'after'         => '</div></div></div>'
+        'after'         => '</div></div></div>',
+        'after_row'     => '<div class="step first_step">'
     ) );
 
     $cmb->add_field( array(
@@ -32,9 +33,19 @@ function to_publish_frontend_form_register() {
             'to_estimate_my_property'   => __( 'To estimate my property', 'to_publish' ),
         ),
         'before_row'    => '<div class="container"><div class="row">', 
-        'classes'       => 'col-md-8 offset-md-2 custom_checkbox',
+        'classes'       => 'offset-md-1 col-md-10 custom_checkbox',
         'after_row'     => '</div></div>'
     ) );
+
+    $cmb->add_field( array(
+		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+        'id'   => 'next_second_step',
+        'type' => 'next_step',  
+        'before_row'    => '<div class="container"><div class="row">', 
+        'classes'       => 'offset-md-1 col-md-10',
+        'after_row'     => '</div></div></div>', 
+    ) );
+
 
     $cmb->add_field( array(
 		'default_cb'    => 'to_publish_maybe_set_default_from_posted_values',
@@ -43,7 +54,8 @@ function to_publish_frontend_form_register() {
         'id'            => 'Description_title',
         'before'        => '<div class="container"><div class="row"><div class="col-md-12">',
         'classes'       => '',
-        'after'         => '</div></div></div>'
+        'after'         => '</div></div></div>',
+        'after_row'      => '<div class="step second_step hide_step">'
     ) );
 
     $cmb->add_field( array(
@@ -165,6 +177,21 @@ function to_publish_frontend_form_register() {
         'after_row'         => '</div></div>'
     ) );
 
+    $cmb->add_field( array(
+		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+        'id'   => 'prev_first_step',
+        'type' => 'prev_step', 
+        'before_row'    => '<div class="container"><div class="row">',
+        'classes'       => 'offset-md-2 col-md-4', 
+    ) );
+    
+    $cmb->add_field( array(
+		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+        'id'   => 'next_third_step',
+        'type' => 'next_step',  
+        'classes'       => 'col-md-4',
+        'after_row'     => '</div></div></div>', 
+    ) );
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
@@ -173,7 +200,8 @@ function to_publish_frontend_form_register() {
         'id'   => 'details_title',
         'before'        => '<div class="container"><div class="row"><div class="col-md-12">',
         'classes'       => '',
-        'after'         => '</div></div></div>'
+        'after'         => '</div></div></div>',
+        'after_row'         => '<div class="step third_step hide_step">'
     ) );
 
     $cmb->add_field( array(
@@ -236,8 +264,62 @@ function to_publish_frontend_form_register() {
         ),
         'before_row'    => '<div class="container"><div class="row">',
         'classes'       => 'col-md-8 offset-md-2',
+        'after'         => '<div class="required_field">' . __('* Required fields', 'to_publish') . '</div>', 
+        'after_row'     =>  '</div></div>', 
+    ) );
+
+
+    $cmb->add_field( array(
+		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+        'id'   => 'submitted',
+        'type' => 'submit', 
+        'before_row'    => '<div class="container"><div class="row">',
+        'classes'       => 'col-md-8 offset-md-2',
         'after_row'     => '</div></div>', 
     ) );
 
+    $cmb->add_field( array(
+		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+        'id'   => 'prev_second_step',
+        'type' => 'prev_step', 
+        'before_row'    => '<div class="container"><div class="row">',
+        'classes'       => 'offset-md-2 col-md-8', 
+        'after_row'     => '</div></div></div>', 
+    ) ); 
+
 }
 add_action( 'cmb2_init', 'to_publish_frontend_form_register' );
+
+
+
+function cmb2_render_callback_for_submit( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+    echo $field_type_object->input( array( 
+        'type'  => 'submit', 
+        'name'  => 'submit-cmb', 
+        'value' => __( 'Submit', 'to_publish'), 
+        'class' => 'btn submit-btn'  
+    ) );
+}
+add_action( 'cmb2_render_submit', 'cmb2_render_callback_for_submit', 10, 5 );
+
+
+function cmb2_render_callback_for_next_step( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+    echo $field_type_object->input( array( 
+        'type'  => 'next_step', 
+        'name'  => 'next_step', 
+        'class' => 'btn-step btn white-btn next',
+        'value' => __( 'Next > ', 'to_publish'),   
+    ) );
+}
+add_action( 'cmb2_render_next_step', 'cmb2_render_callback_for_next_step', 10, 5 );
+
+
+function cmb2_render_callback_for_prev_step( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+    echo $field_type_object->input( array( 
+        'type'  => 'prev_step', 
+        'name'  => 'prev_step', 
+        'class' => 'btn-step btn white-btn prev',
+        'value' => __( ' < Previous', 'to_publish'),   
+    ) );
+}
+add_action( 'cmb2_render_prev_step', 'cmb2_render_callback_for_prev_step', 10, 5 );
