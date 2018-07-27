@@ -95,6 +95,10 @@ function to_publish_frontend_form_register() {
         'name' => __( 'Surface', 'to_publish' ),
         'id'   => 'submitted_surface',
         'type' => 'text', 
+        'attributes' => array(
+            'type' => 'number',
+            'pattern' => '\d*',
+        ), 
         'before_row'    => '<div class="container"><div class="row">',
         'classes'       => 'col-md-8 offset-md-2',
         'after_row'     => '</div></div>'
@@ -135,7 +139,12 @@ function to_publish_frontend_form_register() {
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
         'name' => __( 'Price', 'to_publish' ),
         'id'   => 'submitted_price',
-        'type' => 'text', 
+        'type' => 'text',
+        'attributes' => array(
+            'type' => 'number',
+            'pattern' => '\d*',
+        ), 
+        // 'after_field'   => 'dhs',
         'before_row'    => '<div class="container"><div class="row">',
         'classes'       => 'col-md-8 offset-md-2',
         'after_row'     => '</div></div>'

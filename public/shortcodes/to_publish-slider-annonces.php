@@ -48,7 +48,6 @@ function to_publish_slider_annonces( $atts ){
       $bathrooms  = get_post_meta( get_the_ID(), 'submitted_bathrooms', true );
       $surface  	= get_post_meta( get_the_ID(), 'submitted_surface', true );
       $price  	  = get_post_meta( get_the_ID(), 'submitted_price', true );
-      $price  	  = 2555;
 
       $return .= '<div class="annoce_container items">';
         $return .= '<a href="' . get_the_permalink() .'" title="'. esc_attr( get_the_title() ) .'">';

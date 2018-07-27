@@ -25,6 +25,10 @@ function to_publish_admin_annonces_form_register() {
         'name' => __( 'Surface', 'to_publish' ),
         'id'   => 'submitted_surface',
         'type' => 'text',
+        'attributes' => array(
+            'type' => 'number',
+            'pattern' => '\d*',
+        ), 
         'attributes'  => array( 
             'required'    => 'required',
         ),
@@ -59,6 +63,10 @@ function to_publish_admin_annonces_form_register() {
         'name' => __( 'Price', 'to_publish' ),
         'id'   => 'submitted_price',
         'type' => 'text',
+        'attributes' => array(
+            'type' => 'number',
+            'pattern' => '\d*',
+        ), 
         'attributes'  => array( 
             'required'    => 'required',
         ),
