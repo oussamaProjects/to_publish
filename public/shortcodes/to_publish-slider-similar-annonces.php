@@ -1,7 +1,7 @@
 <?php
 
-add_shortcode( 'slider_annonces', 'to_publish_slider_annonces' );
-function to_publish_slider_annonces( $atts ){
+add_shortcode( 'slider_similar_annonces', 'to_publish_slider_similar_annonces' );
+function to_publish_slider_similar_annonces( $atts ){
   global $post;
   $default = array(
     'type'      => 'post',
@@ -33,10 +33,10 @@ function to_publish_slider_annonces( $atts ){
     $return .= '<div class="row">';
     $return .= '<div class="col-md-12">';
     $return .= '<div class="section_title">';
-    $return .= '<div class="div">'. __("Nouveautés","to_publish") .'</div>';
+    $return .= '<div class="div">'. __("You might also like ...","to_publish") .'</div>';
     $return .= '</div>';
     $return .= '<div class="section_sousTitle">';
-    $return .= __("Découvrez toutes les dernières annonces","to_publish");
+    $return .= __("lorem","to_publish");
     $return .= '</div>';
     $return .= '<div id="annoces_slider" class="annoces_slider owl-carousel owl-theme"> ';
 

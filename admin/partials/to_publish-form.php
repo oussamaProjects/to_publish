@@ -5,11 +5,47 @@
 
 function to_publish_admin_annonces_form_register() {
 
+    $prefix = "to_publish_" ;
     $cmb = new_cmb2_box( array(
         'id'           => 'admin-annonce-form',
 		'title'        => esc_html__( 'Description of the property', 'to_publish' ),
         'object_types' => array( 'annonce' )
     ) ); 
+
+     // $group_field_id is the field id string, so in this case: $prefix . 'demo'
+     $group_field_id = $cmb->add_field( array(
+        'id'          => 'submitted_slides',
+        'type'        => 'group',
+        'options'     => array(
+            'group_title'   => __( 'Entry {#}', 'to_publish' ), // {#} gets replaced by row number
+            'add_button'    => __( 'Add Another Entry', 'to_publish' ),
+            'remove_button' => __( 'Remove Entry', 'to_publish' ),
+            'sortable'      => true, // beta
+            // 'closed'     => true, // true to have the groups closed by default
+        ),
+    ) );
+
+     /**
+     * Group fields works the same, except ids only need
+     * to be unique to the group. Prefix is not needed.
+     *
+     * The parent field's id needs to be passed as the first argument.
+     */
+ 
+    $cmb->add_group_field( $group_field_id, array(
+        'name' => __( 'Image', 'to_publish' ),
+        'id'   => 'submitted_images',
+        'type' => 'file',
+    ) );
+
+
+    $cmb->add_field( array(
+        'name'    =>  __( 'Plus', 'to_publish' ), 
+        'id'      => 'plus',
+        'type'    => 'wysiwyg',
+        'options' => array(),
+    ) );
+
 
     $cmb->add_field( array(
         'id'            => 'submitted_type_request',
@@ -35,27 +71,71 @@ function to_publish_admin_annonces_form_register() {
     ) );
     
     $cmb->add_field( array(
-        'name'             => __( 'Number of rooms', 'to_publish' ),
-        'id'               => 'submitted_rooms',
+        'name'             => __( 'Number of bedrooms', 'to_publish' ),
+        'id'               => 'submitted_bedrooms',
         'type'             => 'select',
         'show_option_none' => true,
-        'options'          => array(
-            '1' => 1,
-            '2' => 2,
-            '3' => 3,
-        ) 
+        'options_cb'        => 'bedrooms_options', 
     ) );
 
+    // Callback function
+    function bedrooms_options( $field ) {
+
+        $bedrooms = array(); 
+        for ( $i = 1; $i <= 10; $i++ ) {
+            $bedrooms[$i] = sprintf( _n( '%d bedroom', '%d bedrooms', $i, 'tanja-marina' ), $i );
+        } 
+        return $bedrooms;
+
+    }
 
     $cmb->add_field( array(
         'name'             => __( 'Number of bathrooms', 'to_publish' ),
         'id'               => 'submitted_bathrooms',
         'type'             => 'select',
         'show_option_none' => true,
-        'options'          => array(
-            '1' => 1,
-            '2' => 2,
-            '3' => 3,
+        'options_cb'       => 'bathrooms_options', 
+    ) );
+
+    // Callback function
+    function bathrooms_options( $field ) {
+
+        $bathrooms = array(); 
+        for ( $i = 1; $i <= 10; $i++ ) {
+            $bathrooms[$i] = sprintf( _n( '%d bathroom', '%d bathrooms', $i, 'tanja-marina' ), $i );
+        } 
+        return $bathrooms;
+    }
+
+    $cmb->add_field( array(
+        'name' => __( 'Rooms', 'to_publish' ),
+        'id'   => 'submitted_rooms',
+        'type' => 'select',
+        'show_option_none' => true,
+        'options_cb'        => 'rooms_options', 
+    ) );
+
+
+    // Callback function
+    function rooms_options( $field ) {
+
+        $rooms = array(); 
+        for ( $i = 1; $i <= 10; $i++ ) {
+            $rooms[$i] = sprintf( _n( '%d room', '%d rooms', $i, 'tanja-marina' ), $i );
+        } 
+        return $rooms;
+    }
+
+    $cmb->add_field( array(
+        'name' => __( 'Floor', 'to_publish' ),
+        'id'   => 'submitted_floor',
+        'type' => 'text',
+        'attributes' => array(
+            'type' => 'number',
+            'pattern' => '\d*',
+        ), 
+        'attributes'  => array( 
+            'required'    => 'required',
         ),
     ) );
 

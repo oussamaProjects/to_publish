@@ -13371,6 +13371,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 **   Example usage: 
 **   @include animation(10s, 5s, changecolour)
 */
+form button,
+form input,
+form optgroup,
+form select,
+form textarea {
+  font-family: "Open sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
 form input[type="text"], form input[type="password"], form input[type="email"], form input[type="url"], form input[type="date"], form input[type="month"], form input[type="time"], form input[type="datetime"], form input[type="datetime-local"], form input[type="week"], form input[type="number"], form input[type="search"], form input[type="tel"], form input[type="color"] {
   width: 100%;
   font-size: 0.875rem;
@@ -13551,7 +13559,7 @@ form textarea {
 }
 
 .hide_step {
-  display: none !important;
+  display: none;
 }
 
 .owl-carousel .owl-stage-outer {
@@ -13947,7 +13955,7 @@ form textarea {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
-  margin-top: -0.4375rem;
+  margin-top: -0.5625rem;
   margin-right: 0.625rem;
   position: absolute;
   top: 50%;

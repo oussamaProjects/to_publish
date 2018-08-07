@@ -118,50 +118,27 @@ function to_publish_frontend_form_register() {
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name'             => __( 'Number of rooms', 'to_publish' ),
-        'id'               => 'submitted_rooms',
+        'name'             => __( 'Number of bedrooms', 'to_publish' ),
+        'id'               => 'submitted_bedrooms',
         'type'             => 'select',
         'show_option_none' => true,
-        'options'          => array(
-            '1' => 1,
-            '2' => 2,
-            '3' => 3,
-        ),
+        'options_cb'        => 'bedrooms_options', 
         'before_row'        => '<div class="container"><div class="row">',
         'classes'       => 'col-md-4 offset-md-2', 
-    ) );
+    ) ); 
 
 
     $cmb->add_field( array(
-		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name'             => __( 'Number of bathrooms', 'to_publish' ),
-        'id'               => 'submitted_bathrooms',
-        'type'             => 'select',
-        'show_option_none' => true,
-        'options'          => array(
-            '1' => 1,
-            '2' => 2,
-            '3' => 3,
-        ), 
-        'classes'       => 'col-md-4',
+		'default_cb'        => 'to_publish_maybe_set_default_from_posted_values',
+        'name'              => __( 'Number of bathrooms', 'to_publish' ),
+        'id'                => 'submitted_bathrooms',
+        'type'              => 'select',
+        'show_option_none'  => true,
+        'options_cb'        => 'bathrooms_options', 
+        'classes'           => 'col-md-4',
         'after_row'         => '</div></div>'
-    ) );
-
-    $cmb->add_field( array(
-		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name' => __( 'Price', 'to_publish' ),
-        'id'   => 'submitted_price',
-        'type' => 'text',
-        'attributes' => array(
-            'type' => 'number',
-            'pattern' => '\d*',
-        ), 
-        // 'after_field'   => 'dhs',
-        'before_row'    => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
-        'after_row'     => '</div></div>'
-    ) );
-
+    ) ); 
+    
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
         'name'           => __( 'City', 'to_publish' ),
@@ -305,7 +282,7 @@ add_action( 'cmb2_render_submit', 'cmb2_render_callback_for_submit', 10, 5 );
 
 function cmb2_render_callback_for_next_step( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
     echo $field_type_object->input( array( 
-        'type'  => 'next_step', 
+        'type'  => 'button', 
         'name'  => 'next_step', 
         'class' => 'btn-step btn white-btn next',
         'value' => __( 'Next > ', 'to_publish'),   
