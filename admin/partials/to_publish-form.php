@@ -195,5 +195,14 @@ function to_publish_admin_annonces_form_register() {
         ),
     ) );
 
+
+    $cmb->add_field( array(
+        'name' => 'Location',
+        'desc' => 'Drag the marker to set the exact location',
+        'id'   => 'submitted_location',
+        'type' => 'pw_map',
+        'split_values' => true, // Save latitude and longitude as two separate fields
+    ));
+
 }
 add_action( 'cmb2_admin_init', 'to_publish_admin_annonces_form_register' );

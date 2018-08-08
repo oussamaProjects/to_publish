@@ -1,26 +1,27 @@
 # Copyright (C) 2017 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-08-07 13:31+0100\n"
+"PO-Revision-Date: 2018-08-07 13:43+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: Poedit 2.1.1\n"
 "X-Poedit-KeywordsList: __;_e;esc_html;esc_html__;esc_html_e;_n;sprintf\n"
 "X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
 #: admin/partials/to_publish-form.php:11
 msgid "Description of the property"
-msgstr ""
+msgstr "Description du bien"
 
 #: admin/partials/to_publish-form.php:20
 msgid "Entry {#}"
@@ -36,87 +37,90 @@ msgstr ""
 
 #: admin/partials/to_publish-form.php:36
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: admin/partials/to_publish-form.php:43
 msgid "Plus"
-msgstr ""
+msgstr "Plus"
 
 #: admin/partials/to_publish-form.php:54 public/partials/to_publish-form.php:31
 msgid "Sell my property"
-msgstr ""
+msgstr "Vendre mon bien"
 
 #: admin/partials/to_publish-form.php:55 public/partials/to_publish-form.php:32
 msgid "Entrust my research"
-msgstr ""
+msgstr "Confier ma recherche"
 
 #: admin/partials/to_publish-form.php:56 public/partials/to_publish-form.php:33
 msgid "To estimate my property"
-msgstr ""
+msgstr "Faire estimer mon bien"
 
-#: admin/partials/to_publish-form.php:61 public/partials/to_publish-form.php:107
+#: admin/partials/to_publish-form.php:61
+#: public/partials/to_publish-form.php:107
 msgid "Surface"
-msgstr ""
+msgstr "Surface"
 
-#: admin/partials/to_publish-form.php:74 public/partials/to_publish-form.php:121
+#: admin/partials/to_publish-form.php:74
+#: public/partials/to_publish-form.php:121
 msgid "Number of bedrooms"
-msgstr ""
+msgstr "Nombre de chambres"
 
 #: admin/partials/to_publish-form.php:86
 #, php-format
 msgid "%d bedroom"
-msgstr ""
+msgstr "Chambre %d"
 
-#: admin/partials/to_publish-form.php:93 public/partials/to_publish-form.php:133
+#: admin/partials/to_publish-form.php:93
+#: public/partials/to_publish-form.php:133
 msgid "Number of bathrooms"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:105
 #, php-format
 msgid "%d bathroom"
-msgstr ""
+msgstr "Salle de bain %d"
 
 #: admin/partials/to_publish-form.php:111
 msgid "Rooms"
-msgstr ""
+msgstr "Les Chambres"
 
 #: admin/partials/to_publish-form.php:124
 #, php-format
 msgid "%d room"
-msgstr ""
+msgstr "%d chambre"
 
 #: admin/partials/to_publish-form.php:130
 msgid "Floor"
-msgstr ""
+msgstr "Étage"
 
 #: admin/partials/to_publish-form.php:143
 msgid "Price"
-msgstr ""
+msgstr "Prix"
 
 #: admin/partials/to_publish-form.php:156
 #: public/partials/to_publish-form.php:186
 msgid "Your Name*"
-msgstr ""
+msgstr "Votre nom*"
 
 #: admin/partials/to_publish-form.php:165
 #: public/partials/to_publish-form.php:199
 msgid "Your Email*"
-msgstr ""
+msgstr "Votre Email*"
 
 #: admin/partials/to_publish-form.php:174
 #: public/partials/to_publish-form.php:212
 msgid "Phone*"
-msgstr ""
+msgstr "Téléphone *"
 
 #: admin/partials/to_publish-form.php:183 includes/cmb2-functions.php:81
 #: public/partials/to_publish-form.php:225
 msgid "Phone 2"
-msgstr ""
+msgstr "Téléphone 2"
 
 #: admin/partials/to_publish-form.php:189
 #: public/partials/to_publish-form.php:235
 msgid "Message*"
-msgstr ""
+msgstr "Message*"
 
 #: cmb2/includes/CMB2.php:179
 msgid "Metabox configuration is required to have an ID parameter."
@@ -124,7 +128,7 @@ msgstr ""
 
 #: cmb2/includes/CMB2_Ajax.php:75
 msgid "Please Try Again"
-msgstr ""
+msgstr "Veuillez réessayer"
 
 #: cmb2/includes/CMB2_Ajax.php:181
 msgid "Remove Embed"
@@ -150,8 +154,8 @@ msgstr ""
 #: cmb2/includes/CMB2_Base.php:426
 #, php-format
 msgid ""
-"Using the \"%1$s\" field parameter as a callback has been deprecated in favor "
-"of the \"%2$s\" parameter."
+"Using the \"%1$s\" field parameter as a callback has been deprecated in "
+"favor of the \"%2$s\" parameter."
 msgstr ""
 
 #: cmb2/includes/CMB2_Base.php:456 cmb2/includes/CMB2_Base.php:462
@@ -197,7 +201,7 @@ msgstr ""
 
 #: cmb2/includes/CMB2_Field.php:1328 cmb2/includes/CMB2_Field.php:1332
 msgid "None"
-msgstr ""
+msgstr "Sans"
 
 #: cmb2/includes/CMB2_Field.php:1443
 msgid "Sorry, this field does not have a cmb_id specified."
@@ -215,15 +219,15 @@ msgstr ""
 
 #: cmb2/includes/CMB2_JS.php:165 cmb2/includes/CMB2_JS.php:208
 msgid "Clear"
-msgstr ""
+msgstr "Vider"
 
 #: cmb2/includes/CMB2_JS.php:166
 msgid "Default"
-msgstr ""
+msgstr "Défaut"
 
 #: cmb2/includes/CMB2_JS.php:167
 msgid "Select Color"
-msgstr ""
+msgstr "Sélectionner une couleur"
 
 #: cmb2/includes/CMB2_JS.php:168
 msgid "Current Color"
@@ -243,8 +247,8 @@ msgstr ""
 
 #: cmb2/includes/CMB2_JS.php:202
 msgid ""
-"January, February, March, April, May, June, July, August, September, October, "
-"November, December"
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
 msgstr ""
 
 #: cmb2/includes/CMB2_JS.php:203
@@ -253,19 +257,19 @@ msgstr ""
 
 #: cmb2/includes/CMB2_JS.php:204
 msgid "Next"
-msgstr ""
+msgstr "Prochain"
 
 #: cmb2/includes/CMB2_JS.php:205
 msgid "Prev"
-msgstr ""
+msgstr "Préc"
 
 #: cmb2/includes/CMB2_JS.php:206
 msgid "Today"
-msgstr ""
+msgstr "Aujourd'hui"
 
 #: cmb2/includes/CMB2_JS.php:207 cmb2/includes/CMB2_JS.php:217
 msgid "Done"
-msgstr ""
+msgstr "Terminé"
 
 #: cmb2/includes/CMB2_JS.php:211
 msgid "Choose Time"
@@ -273,19 +277,19 @@ msgstr ""
 
 #: cmb2/includes/CMB2_JS.php:212
 msgid "Time"
-msgstr ""
+msgstr "Temps"
 
 #: cmb2/includes/CMB2_JS.php:213
 msgid "Hour"
-msgstr ""
+msgstr "Heure"
 
 #: cmb2/includes/CMB2_JS.php:214
 msgid "Minute"
-msgstr ""
+msgstr "Minute"
 
 #: cmb2/includes/CMB2_JS.php:215
 msgid "Second"
-msgstr ""
+msgstr "Seconde"
 
 #: cmb2/includes/CMB2_JS.php:216
 msgid "Now"
@@ -306,11 +310,11 @@ msgstr ""
 #: cmb2/includes/CMB2_JS.php:227 cmb2/includes/CMB2_Types.php:412
 #: cmb2/includes/types/CMB2_Type_File_Base.php:84
 msgid "Remove"
-msgstr ""
+msgstr "Retirer"
 
 #: cmb2/includes/CMB2_JS.php:229 cmb2/includes/types/CMB2_Type_File_Base.php:82
 msgid "Download"
-msgstr ""
+msgstr "Téléchargement"
 
 #: cmb2/includes/CMB2_JS.php:230
 msgid "Select / Deselect All"
@@ -322,7 +326,7 @@ msgstr ""
 
 #: cmb2/includes/CMB2_Options_Hookup.php:135
 msgid "Settings updated."
-msgstr ""
+msgstr "Réglages mis à jour."
 
 #: cmb2/includes/CMB2_Types.php:231
 msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
@@ -365,7 +369,7 @@ msgstr ""
 
 #: cmb2/includes/helper-functions.php:303
 msgid "Save"
-msgstr ""
+msgstr "Sauvegarder"
 
 #: cmb2/includes/helper-functions.php:395
 #, php-format
@@ -396,7 +400,7 @@ msgstr ""
 
 #: cmb2/includes/rest-api/CMB2_REST_Controller.php:392
 msgid "The title for the object."
-msgstr ""
+msgstr "Le titre pour l’objet."
 
 #: cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:51
 msgid "Includes the registered fields for the box in the response."
@@ -404,8 +408,8 @@ msgstr ""
 
 #: cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:72
 msgid ""
-"Includes the fully rendered attributes, 'form_open', 'form_close', as well as "
-"the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
+"Includes the fully rendered attributes, 'form_open', 'form_close', as well "
+"as the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
 "stylesheet handles."
 msgstr ""
 
@@ -420,9 +424,9 @@ msgstr ""
 
 #: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:30
 msgid ""
-"When the '_rendered' argument is passed, the renderable field attributes will "
-"be returned fully rendered. By default, the names of the callback handers for "
-"the renderable attributes will be returned."
+"When the '_rendered' argument is passed, the renderable field attributes "
+"will be returned fully rendered. By default, the names of the callback "
+"handers for the renderable attributes will be returned."
 msgstr ""
 
 #: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:33
@@ -456,7 +460,7 @@ msgstr ""
 #: cmb2/includes/shim/WP_REST_Controller.php:25
 #, php-format
 msgid "Method '%s' must be overridden."
-msgstr ""
+msgstr "La méthode « %s » doit être surchargée."
 
 #: cmb2/includes/shim/WP_REST_Controller.php:35
 #: cmb2/includes/shim/WP_REST_Controller.php:47
@@ -473,23 +477,27 @@ msgstr ""
 #, php-format
 msgid "Method '%s' not implemented. Must be overridden in subclass."
 msgstr ""
+"Méthode «&nbsp;%s&nbsp;» non implémenté. Doit être substitué dans la sous-"
+"classe."
 
 #: cmb2/includes/shim/WP_REST_Controller.php:273
 msgid "Current page of the collection."
-msgstr ""
+msgstr "Page courante de la collection."
 
 #: cmb2/includes/shim/WP_REST_Controller.php:281
 msgid "Maximum number of items to be returned in result set."
-msgstr ""
+msgstr "Nombre maximal d&rsquo;articles à retourner dans le jeu de résultats."
 
 #: cmb2/includes/shim/WP_REST_Controller.php:290
 msgid "Limit results to those matching a string."
-msgstr ""
+msgstr "Limiter les résultats à ceux correspondant à une chaîne."
 
 #: cmb2/includes/shim/WP_REST_Controller.php:308
 msgid ""
 "Scope under which the request is made; determines fields present in response."
 msgstr ""
+"Le contexte dans lequel la requête est faite ; cela détermine les champs "
+"renvoyés."
 
 #: cmb2/includes/types/CMB2_Type_Checkbox.php:57
 #, php-format
@@ -517,15 +525,17 @@ msgstr ""
 #, php-format
 msgid ""
 "<%1$s class=\"img-status cmb2-media-item\">%2$s<p class=\"cmb2-remove-wrapper"
-"\"><a href=\"#\" class=\"cmb2-remove-file-button\"%3$s>%4$s</a></p>%5$s</%1$s>"
+"\"><a href=\"#\" class=\"cmb2-remove-file-button\"%3$s>%4$s</a></p>%5$s</"
+"%1$s>"
 msgstr ""
 
 #: cmb2/includes/types/CMB2_Type_File_Base.php:77
 #, php-format
 msgid ""
-"<%1$s class=\"file-status cmb2-media-item\"><span>%2$s <strong>%3$s</strong></"
-"span>&nbsp;&nbsp; (<a href=\"%4$s\" target=\"_blank\" rel=\"external\">%5$s</"
-"a> / <a href=\"#\" class=\"cmb2-remove-file-button\"%6$s>%7$s</a>)%8$s</%1$s>"
+"<%1$s class=\"file-status cmb2-media-item\"><span>%2$s <strong>%3$s</"
+"strong></span>&nbsp;&nbsp; (<a href=\"%4$s\" target=\"_blank\" rel=\"external"
+"\">%5$s</a> / <a href=\"#\" class=\"cmb2-remove-file-button\"%6$s>%7$s</"
+"a>)%8$s</%1$s>"
 msgstr ""
 
 #: cmb2/includes/types/CMB2_Type_File_List.php:41
@@ -596,79 +606,79 @@ msgstr ""
 
 #: includes/cmb2-functions.php:73
 msgid "Phone"
-msgstr ""
+msgstr "Téléphone"
 
 #: includes/cpt-annonces.php:9 includes/cpt-annonces.php:14
 msgid "Annonces"
-msgstr ""
+msgstr "Annonces"
 
 #: includes/cpt-annonces.php:10
 msgid "Annonce"
-msgstr ""
+msgstr "Annonce"
 
 #: includes/cpt-annonces.php:48 includes/cpt-annonces.php:53
 msgid "Types"
-msgstr ""
+msgstr "Types"
 
 #: includes/cpt-annonces.php:49
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: includes/cpt-annonces.php:80 includes/cpt-annonces.php:85
 msgid "Localisations"
-msgstr ""
+msgstr "Localisations"
 
 #: includes/cpt-annonces.php:81
 msgid "Localisation"
-msgstr ""
+msgstr "Localisation"
 
 #: public/partials/to_publish-form.php:17
 msgid "1. Your request"
-msgstr ""
+msgstr "1. Votre demande"
 
 #: public/partials/to_publish-form.php:52
 msgid "2. Description of the property"
-msgstr ""
+msgstr "2. Description du bien"
 
 #: public/partials/to_publish-form.php:63
 msgid "Type*"
-msgstr ""
+msgstr "Type*"
 
 #: public/partials/to_publish-form.php:81
 msgid "Titre*"
-msgstr ""
+msgstr "Titre*"
 
 #: public/partials/to_publish-form.php:94
 msgid "Description"
-msgstr ""
+msgstr "La description"
 
 #: public/partials/to_publish-form.php:144
 msgid "City"
-msgstr ""
+msgstr "Ville"
 
 #: public/partials/to_publish-form.php:175
 msgid "3. Your details"
-msgstr ""
+msgstr "3. Vos coordonnées"
 
 #: public/partials/to_publish-form.php:244
 msgid "* Required fields"
-msgstr ""
+msgstr "* Champs obligatoires"
 
 #: public/partials/to_publish-form.php:276
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"
 
 #: public/partials/to_publish-form.php:288
 msgid "Next > "
-msgstr ""
+msgstr "Suivant > "
 
 #: public/partials/to_publish-form.php:299
 msgid " < Previous"
-msgstr ""
+msgstr " < Précédent"
 
 #: public/partials/to_publish-save-form.php:34
 msgid "Security check failed."
-msgstr ""
+msgstr "Erreur de vérification de sécurité."
 
 #: public/partials/to_publish-save-form.php:38
 msgid "New post requires a title."
@@ -682,8 +692,8 @@ msgstr ""
 #: public/shortcodes/to_publish-form.php:48
 #, php-format
 msgid ""
-"Thank you%s, your new post has been submitted and is pending review by a site "
-"administrator."
+"Thank you%s, your new post has been submitted and is pending review by a "
+"site administrator."
 msgstr ""
 
 #: public/shortcodes/to_publish-form.php:51
@@ -692,43 +702,43 @@ msgstr ""
 
 #: public/shortcodes/to_publish-slider-annonces.php:36
 msgid "Nouveautés"
-msgstr ""
+msgstr "Nouveautés"
 
 #: public/shortcodes/to_publish-slider-annonces.php:39
 msgid "Découvrez toutes les dernières annonces"
-msgstr ""
+msgstr "Découvrez toutes les dernières annonces"
 
 #: public/shortcodes/to_publish-slider-annonces.php:70
 #: public/shortcodes/to_publish-slider-similar-annonces.php:70
 #, php-format
 msgid "%s room"
-msgstr ""
+msgstr "%s Chambre"
 
 #: public/shortcodes/to_publish-slider-annonces.php:77
 #: public/shortcodes/to_publish-slider-similar-annonces.php:77
 #, php-format
 msgid "%s Bathroom"
-msgstr ""
+msgstr "%s Salle de bain"
 
 #: public/shortcodes/to_publish-slider-annonces.php:84
 #: public/shortcodes/to_publish-slider-similar-annonces.php:84
 #, php-format
 msgid "%s surface"
-msgstr ""
+msgstr "%s surface"
 
 #: public/shortcodes/to_publish-slider-annonces.php:98
 #: public/shortcodes/to_publish-slider-similar-annonces.php:98
 msgid "Price : "
-msgstr ""
+msgstr "Prix : "
 
 #: public/shortcodes/to_publish-slider-annonces.php:114
 #: public/shortcodes/to_publish-slider-similar-annonces.php:114
 msgid "No posts found."
-msgstr ""
+msgstr "Aucun article trouvé."
 
 #: public/shortcodes/to_publish-slider-similar-annonces.php:36
 msgid "You might also like ..."
-msgstr ""
+msgstr "Vous aimerez peut-être aussi ..."
 
 #: public/shortcodes/to_publish-slider-similar-annonces.php:39
 msgid "lorem"

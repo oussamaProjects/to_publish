@@ -86,13 +86,10 @@ function to_publish_slider_annonces( $atts ){
               endif; 
 
             $return .= '</div>';
-
-            if(!empty(get_the_terms( get_the_ID(), 'localisation' ))):
-              $localisation = get_the_terms( get_the_ID(), 'localisation' );  
-              $return .= '<div class="localisation">' . $localisation[0]->name; 
-              $return .= '<span>Zemouri </span>';
+  
+              $return .= '<div class="excerpt">'; 
+              $return .= get_the_excerpt();
               $return .= '</div>';
-            endif; 
 
             if( $price ):
               $return .= '<div class="price">' . __("Price : ", "to_publish") . $price . 'dhs</div>';  

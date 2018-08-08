@@ -74,16 +74,11 @@
 			}
 		}
 		
-		.localisation{
-			font-size: oe_rem(14px);
-			font-weight: 700;
-			text-align: center;
+		.excerpt{
+			color: $light_color;
+			font-size: oe_rem(18px);
 			padding: oe_rem(15px) oe_rem(0);
-			height: oe_rem(100px);
-			span{
-				font-weight: 400;
-				display: block;
-			}
+			height: oe_rem(100px); 
 		}
 	}
 	 

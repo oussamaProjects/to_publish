@@ -20,7 +20,7 @@ function to_publish_frontend_form_register() {
         'before'        => '<div class="container"><div class="row"><div class="col-md-12">',
         'classes'       => '',
         'after'         => '</div></div></div>',
-        'after_row'     => '<div class="step first_step">'
+        'after_row'     => '<div class="step first_step hide_step">'
     ) );
 
     $cmb->add_field( array(
@@ -55,7 +55,7 @@ function to_publish_frontend_form_register() {
         'before'        => '<div class="container"><div class="row"><div class="col-md-12">',
         'classes'       => '',
         'after'         => '</div></div></div>',
-        'after_row'      => '<div class="step second_step hide_step">'
+        'after_row'      => '<div class="step second_step">'
     ) );
 
     $cmb->add_field( array(

@@ -29,7 +29,7 @@ function to_publish_register_my_cpts_annonce() {
 		"hierarchical" => false,
 		"rewrite" => array( "slug" => "annonce", "with_front" => true ),
 		"query_var" => true,
-		"supports" => array( "title", "editor", "thumbnail" ),
+		"supports" => array( "title", "editor", "excerpt", "thumbnail" ),
 	);
 
 	register_post_type( "annonce", $args );

@@ -13735,17 +13735,11 @@ form textarea {
   padding-right: 0.25rem;
 }
 
-.annoce_container .info_container .localisation {
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-align: center;
+.annoce_container .info_container .excerpt {
+  color: #525252;
+  font-size: 1.125rem;
   padding: 0.9375rem 0;
   height: 6.25rem;
-}
-
-.annoce_container .info_container .localisation span {
-  font-weight: 400;
-  display: block;
 }
 
 .annoce_container:hover .annoce:after {
