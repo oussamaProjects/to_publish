@@ -10,7 +10,7 @@
 		overflow: hidden;
 		&:after{
 			content: "";
-			background-image: url('./img/icons/annonce_loop.png');
+			background-image: url('./../img/icons/annonce_loop.png');
 			background-repeat: no-repeat;
 			height: oe_rem(42px);
 			width: oe_rem(42px);

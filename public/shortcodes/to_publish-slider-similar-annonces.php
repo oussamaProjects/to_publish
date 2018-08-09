@@ -67,21 +67,21 @@ function to_publish_slider_similar_annonces( $atts ){
               if( $rooms ): 
                 $return .= '<div class="rooms">';
                 $return .= '<i class="fas fa-bed"></i>';
-                $return .= '<span>' . sprintf( _n('%s room', '%s rooms', $rooms, 'tanja_marina' ), $rooms ) . '</span>';
+                $return .= '<span>' . sprintf( _n('%d room', '%d rooms', $rooms, 'to_publish' ), $rooms ) . '</span>';
                 $return .= ' </div>';
               endif;
 
               if( $bathrooms ):
                 $return .= '<div class="bathrooms">';
                 $return .= '<i class="fas fa-shower"></i>';
-                $return .= '<span>' . sprintf( _n( '%s Bathroom', '%s Bathrooms', $bathrooms, 'tanja_marina' ), $bathrooms ) . '</span>';
+                $return .= '<span>' . sprintf( _n( '%d bathroom', '%d bathrooms', $bathrooms, 'to_publish' ), $bathrooms ) . '</span>';
                 $return .= '</div>';
               endif; 
 
               if( $surface ):
                 $return .= '<div class="surface">';
                 $return .= '<img src="' . plugin_dir_url( dirname( __FILE__ ) ) . 'img/svg/superficie.svg" alt="">';
-                $return .= '<span>' . sprintf( _n( '%s surface', '%s surfaces', $surface, 'tanja_marina' ), $surface ) .'</span>';
+                $return .= '<span>' . sprintf( _n( '%d surface', '%d surfaces', $surface, 'to_publish' ), $surface ) .'</span>';
                 $return .= '</div>';
               endif; 
 

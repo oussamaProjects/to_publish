@@ -63,7 +63,6 @@ function to_publish_register_theme_options_metabox() {
 	 */
 	$cmb_options->add_field( array(
 		'name'    => esc_html__( 'mail', 'cmb2' ),
-		'desc'    => esc_html__( '', 'cmb2' ),
 		'id'      => 'mail',
 		'type'    => 'text_email',
 		'default' => 'matt@tanja-marina.com',
@@ -71,7 +70,6 @@ function to_publish_register_theme_options_metabox() {
 
 	$cmb_options->add_field( array(
 		'name'    => esc_html__( 'Phone', 'cmb2' ),
-		'desc'    => esc_html__( '', 'cmb2' ),
 		'id'      => 'phone_1',
 		'type'    => 'text',
 		'default' => '06 61 47 52 25',
@@ -79,7 +77,6 @@ function to_publish_register_theme_options_metabox() {
 
 	$cmb_options->add_field( array(
 		'name'    => esc_html__( 'Phone 2', 'cmb2' ),
-		'desc'    => esc_html__( '', 'cmb2' ),
 		'id'      => 'phone_2',
 		'type'    => 'text',
 		'default' => '06 41 86 30 36',

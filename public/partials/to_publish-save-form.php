@@ -15,10 +15,6 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		return false;
 	}
 	
-	// echo '<pre>';
-	// var_dump($_POST);
-	// echo '</pre>';
-	
 	// Get CMB2 metabox object
 	$cmb = to_publish_frontend_cmb2_get();
 	$post_data = array();
@@ -53,13 +49,14 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	unset( $sanitized_values['submitted_description'] );
 
 	// Create the new post
-	$new_submission_id = wp_insert_post( $post_data, true );
+	// $new_submission_id = wp_insert_post( $post_data, true );
 
 	// If we hit a snag, update the user
 	if ( is_wp_error( $new_submission_id ) ) {
 		return $cmb->prop( 'submission_error', $new_submission_id );
 	}
-	$cmb->save_fields( $new_submission_id, 'post', $sanitized_values );
+	// $cmb->save_fields( $new_submission_id, 'post', $sanitized_values );
+	
 	/**
 	 * Other than post_type and post_status, we want
 	 * our uploaded attachment post to have the same post-data
@@ -76,7 +73,78 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	 * Redirect back to the form page with a query variable with the new post ID.
 	 * This will help double-submissions with browser refreshes
 	 */
+
+	$_types 				= $sanitized_values['submitted_types'];
+	$_description 		= $sanitized_values['submitted_description'];
+	$_surface 			= $sanitized_values['submitted_surface'];
+	$_bedrooms 			= $sanitized_values['submitted_bedrooms'];
+	$_bathrooms 		= $sanitized_values['submitted_bathrooms'];
+	$_localisation 	= $sanitized_values['submitted_localisation'];
+	$_author_name 		= $sanitized_values['submitted_author_name'];
+	$_author_email 	= $sanitized_values['submitted_author_email'];
+	$_author_phone 	= $sanitized_values['submitted_author_phone'];
+	$_author_phone_2 	= $sanitized_values['submitted_author_phone_2'];
+	$_message 			= $sanitized_values['submitted_message'];
+
+	// EDIT THE 2 LINES BELOW AS REQUIRED
+	$email_to 		= "oussama@comenscene.com";
+	$email_from 	= $_author_email;
+	$email_reply	= $_author_email;
+	$email_subject = $_types ;  
+
+	$error_message = "";
+	$email_exp 		= '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+	if(!preg_match($email_exp,$email_from)) {
+		$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+	}
+
+	$string_exp = "/^[A-Za-z .'-]+$/";
+	if(!preg_match($string_exp, $_author_name)) {
+		$error_message .= 'The Username you entered does not appear to be valid.<br />';
+	}
+
+	if(strlen($error_message) > 0) {
+		died($error_message);
+	}
+	
+	$email_message = __("Form details below.", "to_publish") . "\n\n";
+
+	$email_message .= __("Description : ", "to_publish")		. clean_string($_description) 	. "\n";
+	$email_message .= __("Surface : ", "to_publish")			. clean_string($_surface) 			. "\n";
+	$email_message .= __("Bedrooms : ", "to_publish")			. clean_string($_bedrooms) 		. "\n";
+	$email_message .= __("Bathrooms : ", "to_publish")			. clean_string($_bathrooms) 		. "\n";
+	$email_message .= __("Localisation : ", "to_publish")		. clean_string($_localisation) 	. "\n";
+	$email_message .= __("Name : ", "to_publish") 				. clean_string($_author_name) 	. "\n";
+	$email_message .= __("Phone : ", "to_publish")				. clean_string($_author_phone) 	. "\n";
+	$email_message .= __("Phone 2 : ", "to_publish")			. clean_string($_author_phone_2) . "\n";
+	$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "\n";
+
+	// create email headers
+	$headers = 'From: '.$email_from."\r\n".
+	'Reply-To: '.$email_reply."\r\n" .
+	'X-Mailer: PHP/' . phpversion();
+
+	// @mail($email_to, $email_subject, $email_message, $headers); 
+
+	wp_mail($email_to, $email_subject, $email_message);
+
 	wp_redirect( esc_url_raw( add_query_arg( 'post_submitted', $new_submission_id ) ) );
 	exit;
 }
 add_action( 'cmb2_after_init', 'to_publish_handle_frontend_new_post_form_submission' );
+
+
+
+function died($error) {
+	// your error code can go here
+ echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+ echo "These errors appear below.<br /><br />";
+ echo $error."<br /><br />";
+ echo "Please go back and fix these errors.<br /><br />";
+ die();
+}
+
+function clean_string($string) {
+	$bad = array("content-type","bcc:","to:","cc:","href");
+	return str_replace($bad,"",$string);
+}

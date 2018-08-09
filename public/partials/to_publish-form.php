@@ -76,18 +76,18 @@ function to_publish_frontend_form_register() {
         'after_row'      => '</div></div>'
     ) );
 
-    $cmb->add_field( array(
-		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name' => __( 'Titre*', 'to_publish' ),
-        'id'   => 'submitted_post_title',
-        'type' => 'text',
-        'attributes'  => array( 
-            'required'    => 'required',
-        ), 
-        'before_row'        => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
-        'after_row'         => '</div></div>'
-    ) );
+    // $cmb->add_field( array(
+	// 	'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+    //     'name' => __( 'Titre*', 'to_publish' ),
+    //     'id'   => 'submitted_post_title',
+    //     'type' => 'text',
+    //     'attributes'  => array( 
+    //         'required'    => 'required',
+    //     ), 
+    //     'before_row'        => '<div class="container"><div class="row">',
+    //     'classes'       => 'col-md-8 offset-md-2',
+    //     'after_row'         => '</div></div>'
+    // ) );
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
@@ -293,7 +293,7 @@ add_action( 'cmb2_render_next_step', 'cmb2_render_callback_for_next_step', 10, 5
 
 function cmb2_render_callback_for_prev_step( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
     echo $field_type_object->input( array( 
-        'type'  => 'prev_step', 
+        'type'  => 'button', 
         'name'  => 'prev_step', 
         'class' => 'btn-step btn white-btn prev',
         'value' => __( ' < Previous', 'to_publish'),   

@@ -83,7 +83,7 @@ function to_publish_admin_annonces_form_register() {
 
         $bedrooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
-            $bedrooms[$i] = sprintf( _n( '%d bedroom', '%d bedrooms', $i, 'tanja-marina' ), $i );
+            $bedrooms[$i] = sprintf( _n( '%d bedroom', '%d bedrooms', $i, 'to_publish' ), $i );
         } 
         return $bedrooms;
 
@@ -102,7 +102,7 @@ function to_publish_admin_annonces_form_register() {
 
         $bathrooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
-            $bathrooms[$i] = sprintf( _n( '%d bathroom', '%d bathrooms', $i, 'tanja-marina' ), $i );
+            $bathrooms[$i] = sprintf( _n( '%d bathroom', '%d bathrooms', $i, 'to_publish' ), $i );
         } 
         return $bathrooms;
     }
@@ -121,7 +121,7 @@ function to_publish_admin_annonces_form_register() {
 
         $rooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
-            $rooms[$i] = sprintf( _n( '%d room', '%d rooms', $i, 'tanja-marina' ), $i );
+            $rooms[$i] = sprintf( _n( '%d room', '%d rooms', $i, 'to_publish' ), $i );
         } 
         return $rooms;
     }

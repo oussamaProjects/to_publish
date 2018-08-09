@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-08-07 13:31+0100\n"
+"POT-Creation-Date: 2018-08-08 18:33+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +17,7 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: cmb2\n"
 
 #: admin/partials/to_publish-form.php:11
 msgid "Description of the property"
@@ -72,6 +73,8 @@ msgid "Number of bathrooms"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:105
+#: public/shortcodes/to_publish-slider-annonces.php:77
+#: public/shortcodes/to_publish-slider-similar-annonces.php:77
 #, php-format
 msgid "%d bathroom"
 msgstr ""
@@ -81,6 +84,8 @@ msgid "Rooms"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:124
+#: public/shortcodes/to_publish-slider-annonces.php:70
+#: public/shortcodes/to_publish-slider-similar-annonces.php:70
 #, php-format
 msgid "%d room"
 msgstr ""
@@ -108,7 +113,7 @@ msgstr ""
 msgid "Phone*"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:183 includes/cmb2-functions.php:81
+#: admin/partials/to_publish-form.php:183 includes/cmb2-functions.php:79
 #: public/partials/to_publish-form.php:225
 msgid "Phone 2"
 msgstr ""
@@ -116,474 +121,6 @@ msgstr ""
 #: admin/partials/to_publish-form.php:189
 #: public/partials/to_publish-form.php:235
 msgid "Message*"
-msgstr ""
-
-#: cmb2/includes/CMB2.php:179
-msgid "Metabox configuration is required to have an ID parameter."
-msgstr ""
-
-#: cmb2/includes/CMB2_Ajax.php:75
-msgid "Please Try Again"
-msgstr ""
-
-#: cmb2/includes/CMB2_Ajax.php:181
-msgid "Remove Embed"
-msgstr ""
-
-#: cmb2/includes/CMB2_Ajax.php:189 cmb2/includes/helper-functions.php:105
-#, php-format
-msgid "No oEmbed Results Found for %1$s. View more info at %2$s."
-msgstr ""
-
-#: cmb2/includes/CMB2_Ajax.php:186
-#, php-format
-msgid "<p class=\"ui-state-error-text\">%s</p>"
-msgstr ""
-
-#: cmb2/includes/CMB2_Base.php:422
-#, php-format
-msgid ""
-"The \"%1$s\" field parameter has been deprecated in favor of the \"%2$s\" "
-"parameter."
-msgstr ""
-
-#: cmb2/includes/CMB2_Base.php:426
-#, php-format
-msgid ""
-"Using the \"%1$s\" field parameter as a callback has been deprecated in favor "
-"of the \"%2$s\" parameter."
-msgstr ""
-
-#: cmb2/includes/CMB2_Base.php:456 cmb2/includes/CMB2_Base.php:462
-#, php-format
-msgid ""
-"%1$s was called with a parameter that is <strong>deprecated</strong> since "
-"version %2$s! %3$s"
-msgstr ""
-
-#: cmb2/includes/CMB2_Base.php:458 cmb2/includes/CMB2_Base.php:464
-#, php-format
-msgid ""
-"%1$s was called with a parameter that is <strong>deprecated</strong> since "
-"version %2$s with no alternative available."
-msgstr ""
-
-#: cmb2/includes/CMB2_Base.php:491 cmb2/includes/CMB2_Hookup_Base.php:100
-#: cmb2/includes/CMB2_Options_Hookup.php:341
-#: cmb2/includes/types/CMB2_Type_Base.php:173
-#, php-format
-msgid "Invalid %1$s property: %2$s"
-msgstr ""
-
-#: cmb2/includes/CMB2_Base.php:506 cmb2/includes/types/CMB2_Type_Base.php:157
-#, php-format
-msgid "Invalid %1$s method: %2$s"
-msgstr ""
-
-#: cmb2/includes/CMB2_Field.php:930
-#, php-format
-msgid ""
-"\n"
-"<label%1$s for=\"%2$s\">%3$s</label>\n"
-msgstr ""
-
-#: cmb2/includes/CMB2_Field.php:1296
-msgid "Add Group"
-msgstr ""
-
-#: cmb2/includes/CMB2_Field.php:1297
-msgid "Remove Group"
-msgstr ""
-
-#: cmb2/includes/CMB2_Field.php:1328 cmb2/includes/CMB2_Field.php:1332
-msgid "None"
-msgstr ""
-
-#: cmb2/includes/CMB2_Field.php:1443
-msgid "Sorry, this field does not have a cmb_id specified."
-msgstr ""
-
-#: cmb2/includes/CMB2_Field_Display.php:432 cmb2/includes/CMB2_JS.php:228
-#: cmb2/includes/types/CMB2_Type_File_Base.php:79
-msgid "File:"
-msgstr ""
-
-#: cmb2/includes/CMB2_Hookup_Base.php:42
-#, php-format
-msgid "%1$s should be implemented by the extended class."
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:165 cmb2/includes/CMB2_JS.php:208
-msgid "Clear"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:166
-msgid "Default"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:167
-msgid "Select Color"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:168
-msgid "Current Color"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:199
-msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:200
-msgid "Su, Mo, Tu, We, Th, Fr, Sa"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:201
-msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:202
-msgid ""
-"January, February, March, April, May, June, July, August, September, October, "
-"November, December"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:203
-msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:204
-msgid "Next"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:205
-msgid "Prev"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:206
-msgid "Today"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:207 cmb2/includes/CMB2_JS.php:217
-msgid "Done"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:211
-msgid "Choose Time"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:212
-msgid "Time"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:213
-msgid "Hour"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:214
-msgid "Minute"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:215
-msgid "Second"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:216
-msgid "Now"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:224
-msgid "Use this file"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:225
-msgid "Use these files"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:226 cmb2/includes/types/CMB2_Type_File_Base.php:64
-msgid "Remove Image"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:227 cmb2/includes/CMB2_Types.php:412
-#: cmb2/includes/types/CMB2_Type_File_Base.php:84
-msgid "Remove"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:229 cmb2/includes/types/CMB2_Type_File_Base.php:82
-msgid "Download"
-msgstr ""
-
-#: cmb2/includes/CMB2_JS.php:230
-msgid "Select / Deselect All"
-msgstr ""
-
-#: cmb2/includes/CMB2_Options_Hookup.php:131
-msgid "Nothing to update."
-msgstr ""
-
-#: cmb2/includes/CMB2_Options_Hookup.php:135
-msgid "Settings updated."
-msgstr ""
-
-#: cmb2/includes/CMB2_Types.php:231
-msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
-msgstr ""
-
-#: cmb2/includes/CMB2_Types.php:349
-msgid "Add Row"
-msgstr ""
-
-#: cmb2/includes/CMB2_Types.php:412
-msgid "Remove Row"
-msgstr ""
-
-#: cmb2/includes/CMB2_Types.php:440
-#, php-format
-msgid ""
-"\n"
-"<%1$s class=\"cmb2-metabox-description\">%2$s</%1$s>\n"
-msgstr ""
-
-#: cmb2/includes/CMB2_Utils.php:593
-#, php-format
-msgid " %1$s=%3$s%2$s%3$s"
-msgstr ""
-
-#: cmb2/includes/CMB2_hookup.php:181
-msgid ""
-"Term Metadata is a WordPress 4.4+ feature. Please upgrade your WordPress "
-"install."
-msgstr ""
-
-#: cmb2/includes/CMB2_hookup.php:185
-msgid "Term metaboxes configuration requires a \"taxonomies\" parameter."
-msgstr ""
-
-#: cmb2/includes/CMB2_hookup.php:458
-#, php-format
-msgid "Toggle panel: %s"
-msgstr ""
-
-#: cmb2/includes/helper-functions.php:303
-msgid "Save"
-msgstr ""
-
-#: cmb2/includes/helper-functions.php:395
-#, php-format
-msgid "%04d-%02d-%02d %02d:%02d:%02d"
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller.php:257
-msgid "This box does not have read permissions."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller.php:277
-msgid "This box does not have write permissions."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller.php:300
-msgid ""
-"No box found by that id. A box needs to be registered with the \"show_in_rest"
-"\" parameter configured."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller.php:378
-msgid "A human-readable description of the object."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller.php:385
-msgid "The id for the object."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller.php:392
-msgid "The title for the object."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:51
-msgid "Includes the registered fields for the box in the response."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:72
-msgid ""
-"Includes the fully rendered attributes, 'form_open', 'form_close', as well as "
-"the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
-"stylesheet handles."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:122
-msgid "No boxes found."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:27
-msgid ""
-"Includes the box object which the fields are registered to in the response."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:30
-msgid ""
-"When the '_rendered' argument is passed, the renderable field attributes will "
-"be returned fully rendered. By default, the names of the callback handers for "
-"the renderable attributes will be returned."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:33
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:36
-msgid ""
-"To view or modify the field's value, the 'object_id' and 'object_type' "
-"arguments are required."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:236
-msgid ""
-"CMB2 Field value cannot be updated without the value parameter specified."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:297
-msgid ""
-"CMB2 Field value cannot be modified without the object_id and object_type "
-"parameters specified."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:312
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:341
-msgid "No field found by that id."
-msgstr ""
-
-#: cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:415
-#, php-format
-msgid "Value Error for %s"
-msgstr ""
-
-#: cmb2/includes/shim/WP_REST_Controller.php:25
-#, php-format
-msgid "Method '%s' must be overridden."
-msgstr ""
-
-#: cmb2/includes/shim/WP_REST_Controller.php:35
-#: cmb2/includes/shim/WP_REST_Controller.php:47
-#: cmb2/includes/shim/WP_REST_Controller.php:59
-#: cmb2/includes/shim/WP_REST_Controller.php:71
-#: cmb2/includes/shim/WP_REST_Controller.php:83
-#: cmb2/includes/shim/WP_REST_Controller.php:95
-#: cmb2/includes/shim/WP_REST_Controller.php:107
-#: cmb2/includes/shim/WP_REST_Controller.php:119
-#: cmb2/includes/shim/WP_REST_Controller.php:131
-#: cmb2/includes/shim/WP_REST_Controller.php:143
-#: cmb2/includes/shim/WP_REST_Controller.php:155
-#: cmb2/includes/shim/WP_REST_Controller.php:168
-#, php-format
-msgid "Method '%s' not implemented. Must be overridden in subclass."
-msgstr ""
-
-#: cmb2/includes/shim/WP_REST_Controller.php:273
-msgid "Current page of the collection."
-msgstr ""
-
-#: cmb2/includes/shim/WP_REST_Controller.php:281
-msgid "Maximum number of items to be returned in result set."
-msgstr ""
-
-#: cmb2/includes/shim/WP_REST_Controller.php:290
-msgid "Limit results to those matching a string."
-msgstr ""
-
-#: cmb2/includes/shim/WP_REST_Controller.php:308
-msgid ""
-"Scope under which the request is made; determines fields present in response."
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Checkbox.php:57
-#, php-format
-msgid "%s <label for=\"%s\">%s</label>"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_File.php:60
-#: cmb2/includes/types/CMB2_Type_File_List.php:32
-#, php-format
-msgid "[%d,%d]"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_File.php:76
-msgid "Add or Upload File"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_File.php:75
-#, php-format
-msgid ""
-"<input class=\"cmb2-upload-button button-secondary\" type=\"button\" value="
-"\"%1$s\" />"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_File_Base.php:60
-#, php-format
-msgid ""
-"<%1$s class=\"img-status cmb2-media-item\">%2$s<p class=\"cmb2-remove-wrapper"
-"\"><a href=\"#\" class=\"cmb2-remove-file-button\"%3$s>%4$s</a></p>%5$s</%1$s>"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_File_Base.php:77
-#, php-format
-msgid ""
-"<%1$s class=\"file-status cmb2-media-item\"><span>%2$s <strong>%3$s</strong></"
-"span>&nbsp;&nbsp; (<a href=\"%4$s\" target=\"_blank\" rel=\"external\">%5$s</"
-"a> / <a href=\"#\" class=\"cmb2-remove-file-button\"%6$s>%7$s</a>)%8$s</%1$s>"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_File_List.php:41
-msgid "Add or Upload Files"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Multi_Base.php:23
-#, php-format
-msgid "\t<option value=\"%s\" %s>%s</option>"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Multi_Base.php:44
-#, php-format
-msgid "\t<li><input%s/> <label for=\"%s\">%s</label></li>\n"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Radio.php:49
-#, php-format
-msgid "<ul class=\"%s\">%s</ul>%s"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Select.php:27
-#, php-format
-msgid "<select%s>%s</select>%s"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Taxonomy_Base.php:115
-msgid "No terms"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Taxonomy_Base.php:121
-#, php-format
-msgid "<%3$s><label %1$s>%2$s</label></%3$s>"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Text.php:55
-#, php-format
-msgid "<input%s/>%s"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Textarea.php:35
-#, php-format
-msgid "<textarea%s>%s</textarea>%s"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Textarea_Code.php:36
-#, php-format
-msgid "<pre>%s"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Title.php:38
-#, php-format
-msgid "<%1$s %2$s>%3$s</%1$s>%4$s"
-msgstr ""
-
-#: cmb2/includes/types/CMB2_Type_Wysiwyg.php:45
-#, php-format
-msgid "<div class=\"cmb2-wysiwyg-wrap\">%s"
 msgstr ""
 
 #: includes/cmb2-functions.php:35
@@ -594,7 +131,7 @@ msgstr ""
 msgid "mail"
 msgstr ""
 
-#: includes/cmb2-functions.php:73
+#: includes/cmb2-functions.php:72
 msgid "Phone"
 msgstr ""
 
@@ -698,31 +235,19 @@ msgstr ""
 msgid "Découvrez toutes les dernières annonces"
 msgstr ""
 
-#: public/shortcodes/to_publish-slider-annonces.php:70
-#: public/shortcodes/to_publish-slider-similar-annonces.php:70
-#, php-format
-msgid "%s room"
-msgstr ""
-
-#: public/shortcodes/to_publish-slider-annonces.php:77
-#: public/shortcodes/to_publish-slider-similar-annonces.php:77
-#, php-format
-msgid "%s Bathroom"
-msgstr ""
-
 #: public/shortcodes/to_publish-slider-annonces.php:84
 #: public/shortcodes/to_publish-slider-similar-annonces.php:84
 #, php-format
-msgid "%s surface"
+msgid "%d surface"
 msgstr ""
 
-#: public/shortcodes/to_publish-slider-annonces.php:98
-#: public/shortcodes/to_publish-slider-similar-annonces.php:98
+#: public/shortcodes/to_publish-slider-annonces.php:95
+#: public/shortcodes/to_publish-slider-similar-annonces.php:96
 msgid "Price : "
 msgstr ""
 
-#: public/shortcodes/to_publish-slider-annonces.php:114
-#: public/shortcodes/to_publish-slider-similar-annonces.php:114
+#: public/shortcodes/to_publish-slider-annonces.php:111
+#: public/shortcodes/to_publish-slider-similar-annonces.php:112
 msgid "No posts found."
 msgstr ""
 
