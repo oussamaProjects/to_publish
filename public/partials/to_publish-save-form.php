@@ -38,38 +38,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	 */
 	$sanitized_values = $cmb->get_sanitized_values( $_POST );
 
-	// Set our post data arguments
-	$post_data['post_title']   = $sanitized_values['submitted_post_title'];
-	unset( $sanitized_values['submitted_post_title'] );
-	$post_data['post_content'] = $sanitized_values['submitted_description'];
-	unset( $sanitized_values['submitted_description'] );
-
-	// Create the new post
-	// $new_submission_id = wp_insert_post( $post_data, true );
-
-	// If we hit a snag, update the user
-	if ( is_wp_error( $new_submission_id ) ) {
-		return $cmb->prop( 'submission_error', $new_submission_id );
-	}
-	// $cmb->save_fields( $new_submission_id, 'post', $sanitized_values );
 	
-	/**
-	 * Other than post_type and post_status, we want
-	 * our uploaded attachment post to have the same post-data
-	 */
-	unset( $post_data['post_type'] );
-	unset( $post_data['post_status'] );
-	// Try to upload the featured image
-	$img_id = to_publish_frontend_form_photo_upload( $new_submission_id, $post_data );
-	// If our photo upload was successful, set the featured image
-	if ( $img_id && ! is_wp_error( $img_id ) ) {
-		set_post_thumbnail( $new_submission_id, $img_id );
-	}
-	/*
-	 * Redirect back to the form page with a query variable with the new post ID.
-	 * This will help double-submissions with browser refreshes
-	 */
-
 	$_type_request 	= $sanitized_values['submitted_type_request'];
 	$_types 				= $sanitized_values['submitted_types'];
 	$_description 		= $sanitized_values['submitted_description'];
@@ -83,21 +52,56 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	$_author_phone_2 	= $sanitized_values['submitted_author_phone_2'];
 	$_message 			= $sanitized_values['submitted_message'];
 
-	// EDIT THE 2 LINES BELOW AS REQUIRED
-	$email_to 		= "oussama@comenscene.com";
+	if ($_type_request == "Sell my property" || $_type_request == "Vendre mon bien" ) {
+		// Set our post data arguments
+		$post_data['post_title']   = $_type_request;
+		unset( $sanitized_values['submitted_post_title'] );
+		$post_data['post_content'] = $sanitized_values['submitted_description'];
+		unset( $sanitized_values['submitted_description'] );
+
+		// Create the new post
+		$new_submission_id = wp_insert_post( $post_data, true );
+
+		// If we hit a snag, update the user
+		if ( is_wp_error( $new_submission_id ) ) {
+			return $cmb->prop( 'submission_error', $new_submission_id );
+		}
+
+		$cmb->save_fields( $new_submission_id, 'post', $sanitized_values );
+		
+		/**
+		 * Other than post_type and post_status, we want
+		 * our uploaded attachment post to have the same post-data
+		 */
+		unset( $post_data['post_type'] );
+		unset( $post_data['post_status'] );
+		// Try to upload the featured image
+		$img_id = to_publish_frontend_form_photo_upload( $new_submission_id, $post_data );
+		// If our photo upload was successful, set the featured image
+		if ( $img_id && ! is_wp_error( $img_id ) ) {
+			set_post_thumbnail( $new_submission_id, $img_id );
+		}
+	}
+
+
+	// Send messaeg to admin
+	$adminID 		= 1;
+	$admin         = get_user_by('id', $adminID);
+	
+	$email_to 		= $admin->user_email;
+	$email_reply	= "oussama@comenscene.com";
 	$email_from 	= $_author_email;
-	$email_reply	= $_author_email;
 	$email_subject = $_type_request ;  
 
 	$error_message = "";
 	$email_exp 		= '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 	if(!preg_match($email_exp,$email_from)) {
-		$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+		$error_message .= __("The Email Address you entered does not appear to be valid.", "to_publish") ."<br />";
 	}
 
 	$string_exp = "/^[A-Za-z .'-]+$/";
 	if(!preg_match($string_exp, $_author_name)) {
-		$error_message .= 'The Username you entered does not appear to be valid.<br />';
+		$error_message .= __("The Username you entered does not appear to be valid.", "to_publish") . "<br />";
 	}
 
 	if(strlen($error_message) > 0) {
@@ -106,15 +110,26 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	
 	$email_message = __("Form details below.", "to_publish") . "\n\n";
 
-	$email_message .= __("Description : ", "to_publish")		. clean_string($_description) 	. "\n";
-	$email_message .= __("Surface : ", "to_publish")			. clean_string($_surface) 			. "\n";
-	$email_message .= __("Bedrooms : ", "to_publish")			. clean_string($_bedrooms) 		. "\n";
-	$email_message .= __("Bathrooms : ", "to_publish")			. clean_string($_bathrooms) 		. "\n";
-	$email_message .= __("Localisation : ", "to_publish")		. clean_string($_localisation) 	. "\n";
-	$email_message .= __("Name : ", "to_publish") 				. clean_string($_author_name) 	. "\n";
-	$email_message .= __("Phone : ", "to_publish")				. clean_string($_author_phone) 	. "\n";
-	$email_message .= __("Phone 2 : ", "to_publish")			. clean_string($_author_phone_2) . "\n";
-	$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "\n";
+	if( isset($_types) && ! empty($_types) )
+		$email_message .= __("Type : ", "to_publish")				. clean_string($_types) 			. "\n";
+	if( isset($_types) && ! empty($_description) )
+		$email_message .= __("Description : ", "to_publish")		. clean_string($_description) 	. "\n";
+	if( isset($_types) && ! empty($_surface) )
+		$email_message .= __("Surface : ", "to_publish")			. clean_string($_surface) 			. "\n";
+	if( isset($_types) && ! empty($_bedrooms) )
+		$email_message .= __("Bedrooms : ", "to_publish")			. clean_string($_bedrooms) 		. "\n";
+	if( isset($_types) && ! empty($_bathrooms) )
+		$email_message .= __("Bathrooms : ", "to_publish")			. clean_string($_bathrooms) 		. "\n";
+	if( isset($_types) && ! empty($_localisation) )
+		$email_message .= __("Localisation : ", "to_publish")		. clean_string($_localisation) 	. "\n";
+	if( isset($_types) && ! empty($_author_name) )
+		$email_message .= __("Name : ", "to_publish") 				. clean_string($_author_name) 	. "\n";
+	if( isset($_types) && ! empty($_author_phone) )
+		$email_message .= __("Phone : ", "to_publish")				. clean_string($_author_phone) 	. "\n";
+	if( isset($_types) && ! empty($_author_phone_2) )
+		$email_message .= __("Phone 2 : ", "to_publish")			. clean_string($_author_phone_2) . "\n";
+	if( isset($_types) && ! empty($_message) )
+		$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "\n";
 
 	// create email headers
 	$headers = 'From: '.$email_from."\r\n".
@@ -123,8 +138,12 @@ function to_publish_handle_frontend_new_post_form_submission() {
 
 	// @mail($email_to, $email_subject, $email_message, $headers); 
 
-	wp_mail($email_to, $email_subject, $email_message);
+	wp_mail($email_to, $email_subject, $email_message, $headers);
 
+	/*
+	 * Redirect back to the form page with a query variable with the new post ID.
+	 * This will help double-submissions with browser refreshes
+	 */
 	wp_redirect( esc_url_raw( add_query_arg( 'post_submitted', $new_submission_id ) ) );
 	exit;
 }
@@ -134,11 +153,11 @@ add_action( 'cmb2_after_init', 'to_publish_handle_frontend_new_post_form_submiss
 
 function died($error) {
 	// your error code can go here
- echo "We are very sorry, but there were error(s) found with the form you submitted. ";
- echo "These errors appear below.<br /><br />";
- echo $error."<br /><br />";
- echo "Please go back and fix these errors.<br /><br />";
- die();
+	_e("We are very sorry, but there were error(s) found with the form you submitted. ", "to_publish") . "<br /><br />";
+	_e("These errors appear below.", "to_publish") . "<br /><br />";
+	echo $error . "<br /><br />";
+	_e("Please go back and fix these errors.", "to_publish") . "<br /><br />";
+	die();
 }
 
 function clean_string($string) {

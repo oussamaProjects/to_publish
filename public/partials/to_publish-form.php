@@ -28,9 +28,9 @@ function to_publish_frontend_form_register() {
         'id'            => 'submitted_type_request',
         'type'          => 'radio_inline',
         'options'       => array(
-            'sell_my_property'          => __( 'Sell my property', 'to_publish' ),
-            'entrust_my_research'       => __( 'Entrust my research', 'to_publish' ),
-            'to_estimate_my_property'   => __( 'To estimate my property', 'to_publish' ),
+            __( 'Sell my property', 'to_publish' )         => __( 'Sell my property', 'to_publish' ),
+            __( 'Entrust my research', 'to_publish' )      => __( 'Entrust my research', 'to_publish' ),
+            __( 'To estimate my property', 'to_publish' )  => __( 'To estimate my property', 'to_publish' ),
         ),
         'before_row'    => '<div class="container"><div class="row">', 
         'classes'       => 'offset-md-1 col-md-10 custom_checkbox',
