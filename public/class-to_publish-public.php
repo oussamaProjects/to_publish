@@ -110,6 +110,9 @@ class To_publish_Public {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/to_publish-public.js', array( 'jquery' ), $this->version, false );
 
+		wp_localize_script( 'script', 'SEARCH_VARS', array(  
+			'ajaxurl' => admin_url( 'admin-ajax.php' )
+		));
 	}
 
 

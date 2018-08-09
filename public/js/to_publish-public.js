@@ -34,6 +34,33 @@
 		$(".alert").delay(4000).fadeOut(500);
 
 
+		if ( $('#submitted_city') ) {
+			var $cities;
+			$cities = $('#submitted_city');
+			$cities.on( 'change', function() {
+					$.ajax({
+					url: SEARCH_VARS.ajaxurl,
+					method: 'GET',
+					data: {
+						action: 'get_neighborhoods',
+						city: $cities.val(),
+					},
+					beforeSend: function() {
+						jQuery("#ajaxloader").show();
+						jQuery("#ajaxShadow").show();
+					},
+					success: function( data ) {
+						if ( data.success ) {
+							$('#submitted_district').html( data.data ); 
+						}
+						jQuery("#ajaxloader").hide();
+						jQuery("#ajaxShadow").hide();
+					}
+				})
+			} );
+		}
+
+
 		$('#annoces_slider').owlCarousel({
 			loop:true,
 			margin: 30,

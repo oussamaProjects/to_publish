@@ -45,12 +45,16 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	$_surface 			= $sanitized_values['submitted_surface'];
 	$_bedrooms 			= $sanitized_values['submitted_bedrooms'];
 	$_bathrooms 		= $sanitized_values['submitted_bathrooms'];
-	$_localisation 	= $sanitized_values['submitted_localisation'];
+	$_city 				= $sanitized_values['submitted_city'];
+	$_district 			= $sanitized_values['submitted_district'];
 	$_author_name 		= $sanitized_values['submitted_author_name'];
 	$_author_email 	= $sanitized_values['submitted_author_email'];
 	$_author_phone 	= $sanitized_values['submitted_author_phone'];
 	$_author_phone_2 	= $sanitized_values['submitted_author_phone_2'];
 	$_message 			= $sanitized_values['submitted_message'];
+
+	$type 			= get_term_by( 'slug', $_types, 'types' );
+	$_type_name 	= $type->name ; 
 
 	if ($_type_request == "Sell my property" || $_type_request == "Vendre mon bien" ) {
 		// Set our post data arguments
@@ -110,8 +114,8 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	
 	$email_message = __("Form details below.", "to_publish") . "\n\n";
 
-	if( isset($_types) && ! empty($_types) )
-		$email_message .= __("Type : ", "to_publish")				. clean_string($_types) 			. "\n";
+	if( isset($_types) && ! empty($_type_name) )
+		$email_message .= __("Type : ", "to_publish")				. clean_string($_type_name) 			. "\n";
 	if( isset($_types) && ! empty($_description) )
 		$email_message .= __("Description : ", "to_publish")		. clean_string($_description) 	. "\n";
 	if( isset($_types) && ! empty($_surface) )
@@ -120,8 +124,10 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		$email_message .= __("Bedrooms : ", "to_publish")			. clean_string($_bedrooms) 		. "\n";
 	if( isset($_types) && ! empty($_bathrooms) )
 		$email_message .= __("Bathrooms : ", "to_publish")			. clean_string($_bathrooms) 		. "\n";
-	if( isset($_types) && ! empty($_localisation) )
-		$email_message .= __("Localisation : ", "to_publish")		. clean_string($_localisation) 	. "\n";
+	if( isset($_types) && ! empty($_city) )
+		$email_message .= __("city : ", "to_publish")				. clean_string($_city) 	. "\n";
+	if( isset($_types) && ! empty($_district) )
+		$email_message .= __("District : ", "to_publish")			. clean_string($_district) 	. "\n";
 	if( isset($_types) && ! empty($_author_name) )
 		$email_message .= __("Name : ", "to_publish") 				. clean_string($_author_name) 	. "\n";
 	if( isset($_types) && ! empty($_author_phone) )

@@ -85,7 +85,7 @@ function to_publish_frontend_form_register() {
     //     'classes'       => 'col-md-8 offset-md-2',
     //     'after_row'         => '</div></div>'
     // ) );
-
+    
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
         'name' => __( 'Description', 'to_publish' ),
@@ -157,19 +157,55 @@ function to_publish_frontend_form_register() {
     }
 
     $cmb->add_field( array(
+		'default_cb'    => 'to_publish_maybe_set_default_from_posted_values',
+        'name'          => __( 'City', 'to_publish' ),
+        'id'            => 'submitted_city', 
+        'type'          => 'select', 
+        'options_cb'    => 'show_city_options',
+        'before_row'    => '<div class="container"><div class="row">',
+        'classes'       => 'col-md-8 offset-md-2',
+        'after_row'     => '</div></div>'
+    ) );
+
+    $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name'           => __( 'City', 'to_publish' ),
-        'id'             => 'submitted_localisation',
-        'taxonomy'       => 'localisation', //Enter Taxonomy Slug
-        'type'           => 'taxonomy_select',
-        'text'           => array(
-            'no_terms_text' => 'Sorry, no localisation could be found.' // Change default text. Default: "No terms"
-        ),
-        'remove_default' => 'true', // Removes the default metabox provided by WP core. Pending release as of Aug-10-16
+        'name'           => __( 'District', 'to_publish' ),
+        'id'             => 'submitted_district',
+        'type'          => 'select', 
+        'options_cb'    => 'show_district_options',
         'before_row'        => '<div class="container"><div class="row">',
         'classes'       => 'col-md-8 offset-md-2',
         'after_row'         => '</div></div>'
     ) );
+    
+    function show_city_options( $field ) { 
+
+        $args_ads_city = array( 
+            'depth'             => 1,
+            'taxonomy'          => 'localisation'
+        ); 
+
+        $ads_cities = get_terms( $args_ads_city );
+        foreach ($ads_cities as $ads_city) {
+            $cities[$ads_city->term_id] = $ads_city->name;
+        } 
+        return $cities;
+    }
+    
+    function show_district_options( $field ) { 
+
+        $args_ads_district = array( 
+            'parent'   => 1,
+            'depth'             => 2,
+            'taxonomy'          => 'localisation', 
+        ); 
+ 
+        $ads_districts = get_terms( $args_ads_district );
+        foreach ($ads_districts as $ads_district) {
+            $districts[] = $ads_district->name;
+        } 
+        return $districts;
+    }
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
@@ -317,3 +353,35 @@ function cmb2_render_callback_for_prev_step( $field, $escaped_value, $object_id,
     ) );
 }
 add_action( 'cmb2_render_prev_step', 'cmb2_render_callback_for_prev_step', 10, 5 );
+
+
+add_action( 'wp_ajax_get_neighborhoods', 'to_publish_get_neighborhoods' );
+add_action( 'wp_ajax_nopriv_get_neighborhoods', 'to_publish_get_neighborhoods' );
+function to_publish_get_neighborhoods() {
+	$taxonomie = 'localisation';
+    $get_city = $_GET['city'];
+    
+	if ( $get_city ) {
+        
+        $city = term_exists( (int)$get_city, $taxonomie );
+
+        if ( $city ) {
+
+            $args = array(  
+                'taxonomy' => $taxonomie, 
+                'child_of' => $city['term_taxonomy_id'],
+                'hide_empty' => false,  
+            ); 
+            
+            $districts = get_terms( $args ); 
+
+            $output = '';
+            foreach( $districts as $district_value => $district_name ){
+                $output .= sprintf( "<option value='%s'>%s</option>", $district_value, $district_name->name ); 
+            }
+            wp_send_json_success( array( $output ) );
+        }
+	} else {
+		wp_send_json_error();
+	}
+}
