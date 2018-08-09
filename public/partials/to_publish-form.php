@@ -124,6 +124,16 @@ function to_publish_frontend_form_register() {
         'classes'       => 'col-md-4 offset-md-2', 
     ) ); 
 
+    // Callback function
+    function bedrooms_options( $field ) {
+
+        $bedrooms = array(); 
+        for ( $i = 1; $i <= 10; $i++ ) {
+            $bedrooms[$i] = sprintf( _n( '%d bedroom', '%d bedrooms', $i, 'to_publish' ), $i );
+        } 
+        return $bedrooms;
+
+    }
 
     $cmb->add_field( array(
 		'default_cb'        => 'to_publish_maybe_set_default_from_posted_values',
@@ -136,6 +146,16 @@ function to_publish_frontend_form_register() {
         'after_row'         => '</div></div>'
     ) ); 
     
+    // Callback function
+    function bathrooms_options( $field ) {
+
+        $bathrooms = array(); 
+        for ( $i = 1; $i <= 10; $i++ ) {
+            $bathrooms[$i] = sprintf( _n( '%d bathroom', '%d bathrooms', $i, 'to_publish' ), $i );
+        } 
+        return $bathrooms;
+    }
+
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
         'name'           => __( 'City', 'to_publish' ),

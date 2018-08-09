@@ -28,11 +28,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	// Check security nonce
 	if ( ! isset( $_POST[ $cmb->nonce() ] ) || ! wp_verify_nonce( $_POST[ $cmb->nonce() ], $cmb->nonce() ) ) {
 		return $cmb->prop( 'submission_error', new WP_Error( 'security_fail', __( 'Security check failed.' ) ) );
-	}
-	// Check title submitted
-	if ( empty( $_POST['submitted_post_title'] ) ) {
-		return $cmb->prop( 'submission_error', new WP_Error( 'post_data_missing', __( 'New post requires a title.' ) ) );
-	}
+	} 
 	// And that the title is not the default title
 	// if ( $cmb->get_field( 'submitted_post_title' )->default() == $_POST['submitted_post_title'] ) {
 	// 	return $cmb->prop( 'submission_error', new WP_Error( 'post_data_missing', __( 'Please enter a new title.' ) ) );
@@ -74,6 +70,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	 * This will help double-submissions with browser refreshes
 	 */
 
+	$_type_request 	= $sanitized_values['submitted_type_request'];
 	$_types 				= $sanitized_values['submitted_types'];
 	$_description 		= $sanitized_values['submitted_description'];
 	$_surface 			= $sanitized_values['submitted_surface'];
@@ -90,7 +87,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	$email_to 		= "oussama@comenscene.com";
 	$email_from 	= $_author_email;
 	$email_reply	= $_author_email;
-	$email_subject = $_types ;  
+	$email_subject = $_type_request ;  
 
 	$error_message = "";
 	$email_exp 		= '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';

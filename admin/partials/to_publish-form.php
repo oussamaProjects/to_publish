@@ -75,11 +75,11 @@ function to_publish_admin_annonces_form_register() {
         'id'               => 'submitted_bedrooms',
         'type'             => 'select',
         'show_option_none' => true,
-        'options_cb'        => 'bedrooms_options', 
+        'options_cb'        => 'admin_bedrooms_options', 
     ) );
 
     // Callback function
-    function bedrooms_options( $field ) {
+    function admin_bedrooms_options( $field ) {
 
         $bedrooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
@@ -94,11 +94,11 @@ function to_publish_admin_annonces_form_register() {
         'id'               => 'submitted_bathrooms',
         'type'             => 'select',
         'show_option_none' => true,
-        'options_cb'       => 'bathrooms_options', 
+        'options_cb'       => 'admin_bathrooms_options', 
     ) );
 
     // Callback function
-    function bathrooms_options( $field ) {
+    function admin_bathrooms_options( $field ) {
 
         $bathrooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
@@ -112,12 +112,12 @@ function to_publish_admin_annonces_form_register() {
         'id'   => 'submitted_rooms',
         'type' => 'select',
         'show_option_none' => true,
-        'options_cb'        => 'rooms_options', 
+        'options_cb'        => 'admin_rooms_options', 
     ) );
 
 
     // Callback function
-    function rooms_options( $field ) {
+    function admin_rooms_options( $field ) {
 
         $rooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
