@@ -136,7 +136,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		$email_message .= __("Bathrooms : ", "to_publish")			. clean_string($_bathrooms) 		. "\n";
 
 	if( isset($_city_name) && ! empty($_city_name) )
-		$email_message .= __("city : ", "to_publish")				. clean_string($_city_name) 		. "\n";
+		$email_message .= __("City : ", "to_publish")				. clean_string($_city_name) 		. "\n";
 
 	if( isset($_district_name) && ! empty($_district_name) )
 		$email_message .= __("District : ", "to_publish")			. clean_string($_district_name) 	. "\n";

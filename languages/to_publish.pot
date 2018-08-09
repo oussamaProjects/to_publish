@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-08-09 11:47+0100\n"
+"POT-Creation-Date: 2018-08-09 16:52+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -100,27 +100,27 @@ msgid "Price"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:156
-#: public/partials/to_publish-form.php:203
+#: public/partials/to_publish-form.php:239
 msgid "Your Name*"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:165
-#: public/partials/to_publish-form.php:216
+#: public/partials/to_publish-form.php:252
 msgid "Your Email*"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:174
-#: public/partials/to_publish-form.php:229
+#: public/partials/to_publish-form.php:265
 msgid "Phone*"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:183 includes/cmb2-functions.php:79
-#: public/partials/to_publish-form.php:242
+#: public/partials/to_publish-form.php:278
 msgid "Phone 2"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:189
-#: public/partials/to_publish-form.php:252
+#: public/partials/to_publish-form.php:288
 msgid "Message*"
 msgstr ""
 
@@ -180,92 +180,105 @@ msgstr ""
 msgid "City"
 msgstr ""
 
-#: public/partials/to_publish-form.php:192
+#: public/partials/to_publish-form.php:172
+msgid "District"
+msgstr ""
+
+#: public/partials/to_publish-form.php:228
 msgid "3. Your details"
 msgstr ""
 
-#: public/partials/to_publish-form.php:261
+#: public/partials/to_publish-form.php:297
 msgid "* Required fields"
 msgstr ""
 
-#: public/partials/to_publish-form.php:293
+#: public/partials/to_publish-form.php:329
 msgid "Submit"
 msgstr ""
 
-#: public/partials/to_publish-form.php:305
+#: public/partials/to_publish-form.php:341
 msgid "Next > "
 msgstr ""
 
-#: public/partials/to_publish-form.php:316
+#: public/partials/to_publish-form.php:352
 msgid " < Previous"
+msgstr ""
+
+#: public/partials/to_publish-form.php:380
+#, php-format
+msgid "<option value='%s'>%s</option>"
 msgstr ""
 
 #: public/partials/to_publish-save-form.php:30
 msgid "Security check failed."
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:99
+#: public/partials/to_publish-save-form.php:109
 msgid "The Email Address you entered does not appear to be valid."
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:104
+#: public/partials/to_publish-save-form.php:114
 msgid "The Username you entered does not appear to be valid."
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:111
+#: public/partials/to_publish-save-form.php:121
 msgid "Form details below."
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:114
+#: public/partials/to_publish-save-form.php:124
 msgid "Type : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:116
+#: public/partials/to_publish-save-form.php:127
 msgid "Description : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:118
+#: public/partials/to_publish-save-form.php:130
 msgid "Surface : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:120
+#: public/partials/to_publish-save-form.php:133
 msgid "Bedrooms : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:122
+#: public/partials/to_publish-save-form.php:136
 msgid "Bathrooms : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:124
-msgid "Localisation : "
+#: public/partials/to_publish-save-form.php:139
+msgid "City : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:126
+#: public/partials/to_publish-save-form.php:142
+msgid "District : "
+msgstr ""
+
+#: public/partials/to_publish-save-form.php:145
 msgid "Name : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:128
+#: public/partials/to_publish-save-form.php:148
 msgid "Phone : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:130
+#: public/partials/to_publish-save-form.php:151
 msgid "Phone 2 : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:132
+#: public/partials/to_publish-save-form.php:154
 msgid "Message : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:156
+#: public/partials/to_publish-save-form.php:179
 msgid ""
 "We are very sorry, but there were error(s) found with the form you submitted. "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:157
+#: public/partials/to_publish-save-form.php:180
 msgid "These errors appear below."
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:159
+#: public/partials/to_publish-save-form.php:182
 msgid "Please go back and fix these errors."
 msgstr ""
 
