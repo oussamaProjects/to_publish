@@ -66,10 +66,7 @@ function to_publish_frontend_form_register() {
         'type'           => 'taxonomy_select',
         'text'           => array(
             'no_terms_text' => 'Sorry, no types could be found.' // Change default text. Default: "No terms"
-        ),
-        'attributes'     => array( 
-            'required'  => 'required'
-        ),
+        ), 
         'remove_default' => 'true', // Removes the default metabox provided by WP core. Pending release as of Aug-10-16
         'before_row'     => '<div class="container"><div class="row">',
         'classes'        => 'col-md-8 offset-md-2',
