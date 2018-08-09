@@ -59,7 +59,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	$city 				= get_term_by( 'id', $_city, 'localisation' );
 	$_city_name 		= $city->name ; 
 
-	$district 			= get_term_by( 'id', $__districts, 'localisation' );
+	$district 			= get_term_by( 'id', $_districts, 'localisation' );
 	$_district_name 	= $district->name ; 
 
 	if ($_type_request == "Sell my property" || $_type_request == "Vendre mon bien" ) {
