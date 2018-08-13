@@ -4,10 +4,13 @@ add_shortcode( 'slider_similar_annonces', 'to_publish_slider_similar_annonces' )
 function to_publish_slider_similar_annonces( $atts ){
   global $post;
   $default = array(
-    'type'      => 'post',
-    'post_type' => 'annonce',
-    'limit'     => 10,
-    'status'    => 'publish'
+    'type'        => 'post',
+    'post_type'   => 'annonce',
+    'limit'       => 12,
+    'status'      => 'publish',
+    'exclude_post' => array( ),
+    'type_id'      => 1,
+    'district_id'   => 1,
   );
   $r = shortcode_atts( $default, $atts );
   extract( $r );
@@ -19,12 +22,25 @@ function to_publish_slider_similar_annonces( $atts ){
   if( !$post_type_ob )
     return '<div class="warning"><p>No such post type <em>' . $post_type . '</em> found.</p></div>';
 
-
+ 
   $args = array(
     'post_type'   => $post_type,
     'numberposts' => $limit,
     'post_status' => $status,
-  );
+    'post__not_in' => array($exclude_post),
+    'tax_query' => array(
+      array(
+          'taxonomy' => 'types',
+          'field'    => 'term_id',
+          'terms'    => $type_id,
+      ),
+      array(
+          'taxonomy' => 'localisation',
+          'field'    => 'term_id',
+          'terms'    => $district_id,
+      ),
+    )
+  ); 
 
   $posts = get_posts( $args );
   if( count($posts) ):
@@ -107,9 +123,6 @@ function to_publish_slider_similar_annonces( $atts ){
     $return .= '</div>';
     $return .= '</div>';
     $return .= '</section>';
-
-  else :
-    $return .= '<p>' . _("No posts found.", "to_publish") .'</p>';
   endif;
 
   

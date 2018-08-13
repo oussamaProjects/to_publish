@@ -262,7 +262,7 @@ function to_publish_frontend_form_register() {
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name' => __( 'Phone*', 'to_publish' ),
+        'name' => __( 'Your phone 1*', 'to_publish' ),
         'id'   => 'submitted_author_phone',
         'type' => 'text',
         'attributes'  => array( 
@@ -275,7 +275,7 @@ function to_publish_frontend_form_register() {
 
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-        'name' => __( 'Phone 2', 'to_publish' ),
+        'name' => __( 'Your phone 2', 'to_publish' ),
         'id'   => 'submitted_author_phone_2',
         'type' => 'text',
         'before_row'        => '<div class="container"><div class="row">',
