@@ -12,6 +12,12 @@ function to_publish_admin_annonces_form_register() {
         'object_types' => array( 'annonce' )
     ) ); 
 
+    $cmb->add_field( array(
+        'name' => __( 'Sold', 'to_publish' ), 
+        'id'   => 'submitted_sold',
+        'type' => 'checkbox',
+    ) );
+
      // $group_field_id is the field id string, so in this case: $prefix . 'demo'
      $group_field_id = $cmb->add_field( array(
         'id'          => 'submitted_slides',

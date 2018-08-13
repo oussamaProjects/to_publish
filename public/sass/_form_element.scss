@@ -51,8 +51,8 @@ form{
 		font-size: oe_rem(14px);
 		height: oe_rem(150px);
 		margin: oe_rem(10px) 0;
-	} 
-	
+	}
+
 	@include media("<md"){
 		input{ 
 			&[type="submit"]{ 

@@ -6,7 +6,7 @@ function to_publish_slider_annonces( $atts ){
   $default = array(
     'type'      => 'post',
     'post_type' => 'annonce',
-    'limit'     => 10,
+    'limit'     => 12,
     'status'    => 'publish'
   );
   $r = shortcode_atts( $default, $atts );
