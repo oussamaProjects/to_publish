@@ -13967,7 +13967,7 @@ form textarea {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .cmb2-wrap .custom_checkbox .cmb2-radio-list {
     display: -ms-flexbox;
     display: flex;

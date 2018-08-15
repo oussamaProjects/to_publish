@@ -69,7 +69,7 @@ function to_publish_frontend_form_register() {
         ), 
         'remove_default' => 'true', // Removes the default metabox provided by WP core. Pending release as of Aug-10-16
         'before_row'     => '<div class="container"><div class="row">',
-        'classes'        => 'col-md-8 offset-md-2',
+        'classes'        => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'      => '</div></div>'
     ) );
 
@@ -82,7 +82,7 @@ function to_publish_frontend_form_register() {
     //         'required'    => 'required',
     //     ), 
     //     'before_row'        => '<div class="container"><div class="row">',
-    //     'classes'       => 'col-md-8 offset-md-2',
+    //     'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
     //     'after_row'         => '</div></div>'
     // ) );
     
@@ -95,7 +95,7 @@ function to_publish_frontend_form_register() {
             'row'       => 8
         ),
         'before_row'    => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'     => '</div></div>', 
     ) );
 
@@ -109,7 +109,7 @@ function to_publish_frontend_form_register() {
             'pattern' => '\d*',
         ), 
         'before_row'    => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'     => '</div></div>'
     ) );
 
@@ -119,9 +119,9 @@ function to_publish_frontend_form_register() {
         'id'               => 'submitted_bedrooms',
         'type'             => 'select',
         'show_option_none' => true,
-        'options_cb'        => 'bedrooms_options', 
-        'before_row'        => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-4 offset-md-2', 
+        'options_cb'       => 'bedrooms_options', 
+        'before_row'       => '<div class="container"><div class="row">',
+        'classes'          => 'col-lg-4 offset-lg-2 col-md-6', 
     ) ); 
 
     // Callback function
@@ -142,7 +142,7 @@ function to_publish_frontend_form_register() {
         'type'              => 'select',
         'show_option_none'  => true,
         'options_cb'        => 'bathrooms_options', 
-        'classes'           => 'col-md-4',
+        'classes'           => 'col-lg-4 col-md-6custom_checkbox',
         'after_row'         => '</div></div>'
     ) ); 
     
@@ -163,7 +163,7 @@ function to_publish_frontend_form_register() {
         'type'          => 'select', 
         'options_cb'    => 'show_city_options',
         'before_row'    => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'     => '</div></div>'
     ) );
 
@@ -174,7 +174,7 @@ function to_publish_frontend_form_register() {
         'type'          => 'select', 
         'options_cb'    => 'show_district_options',
         'before_row'        => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'         => '</div></div>'
     ) );
     
@@ -243,7 +243,7 @@ function to_publish_frontend_form_register() {
             'required'    => 'required',
         ), 
         'before_row'        => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'         => '</div></div>'
     ) );
 
@@ -256,7 +256,7 @@ function to_publish_frontend_form_register() {
             'required'    => 'required',
         ),
         'before_row'        => '<div class="container"><div class="row">', 
-        'classes'           => 'col-md-8 offset-md-2',
+        'classes'           => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'         => '</div></div>'
     ) );
 
@@ -269,7 +269,7 @@ function to_publish_frontend_form_register() {
             'required'    => 'required',
         ),
         'before_row'        => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'         => '</div></div>'
     ) );
 
@@ -279,7 +279,7 @@ function to_publish_frontend_form_register() {
         'id'   => 'submitted_author_phone_2',
         'type' => 'text',
         'before_row'        => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'         => '</div></div>'
     ) );
 
@@ -293,7 +293,7 @@ function to_publish_frontend_form_register() {
             'row'       => 12
         ),
         'before_row'    => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after'         => '<div class="required_field">' . __('* Required fields', 'to_publish') . '</div>', 
         'after_row'     =>  '</div></div>', 
     ) );
@@ -304,7 +304,7 @@ function to_publish_frontend_form_register() {
         'id'   => 'submitted',
         'type' => 'submit', 
         'before_row'    => '<div class="container"><div class="row">',
-        'classes'       => 'col-md-8 offset-md-2',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'     => '</div></div>', 
     ) );
 

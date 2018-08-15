@@ -201,7 +201,7 @@
  	}
 
 
-	 @include media("<lg") {
+	 @include media("<xl") {
 		.custom_checkbox{
 			.cmb2-radio-list{
 				@include flex(center, space-between, column);
