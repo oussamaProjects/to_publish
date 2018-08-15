@@ -201,7 +201,18 @@
  	}
 
 
- }
+	 @include media("<lg") {
+		.custom_checkbox{
+			.cmb2-radio-list{
+				@include flex(center, space-between, column);
+				li{ 
+					margin: oe_rem(4px) 0;
+				}
+			}
+		}
+	}
+
+}
 
  .cmb2-metabox {
  	clear: both;
@@ -432,7 +443,7 @@
 
 
 .cmb-type-title{
- 	height: oe_rem(100px);
+ 	height: oe_rem(60px);
 	background-color: $second_main_color;
 	@include oe_box-shadow-light;
 	&:first-child{
@@ -441,8 +452,8 @@
  	.cmb2-metabox-title {
  		color: $main-text-color;
  		font-weight: 600;
- 		font-size: oe_rem(30px);
- 		line-height: oe_rem(90px);
+ 		font-size: oe_rem(22px);
+ 		line-height: oe_rem(60px);
  	}
  }
 

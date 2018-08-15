@@ -139,6 +139,16 @@ form{
 	&.prev{
 		float: left;
 	}
+	@include media("<lg"){
+		display: block !important;
+		margin: 0 auto;
+		&.next{
+			float: none;
+		}
+		&.prev{
+			float: none;
+		}
+	}
 }
 
 .hide_step{
