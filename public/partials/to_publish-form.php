@@ -181,8 +181,10 @@ function to_publish_frontend_form_register() {
     function show_city_options( $field ) { 
 
         $args_ads_city = array( 
+            'parent'            => 0,
             'depth'             => 1,
-            'taxonomy'          => 'localisation'
+            'taxonomy'          => 'localisation',
+            'hide_empty' => false,
         ); 
 
         $ads_cities = get_terms( $args_ads_city );
@@ -195,9 +197,10 @@ function to_publish_frontend_form_register() {
     function show_district_options( $field ) { 
 
         $args_ads_district = array( 
-            'parent'   => 1,
+            'parent'            => 1,
             'depth'             => 2,
             'taxonomy'          => 'localisation', 
+            'hide_empty' => false,
         ); 
  
         $ads_districts = get_terms( $args_ads_district );
