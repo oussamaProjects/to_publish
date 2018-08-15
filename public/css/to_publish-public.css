@@ -13492,6 +13492,10 @@ form textarea {
   border-color: #e0e0e0;
 }
 
+.submit-btn {
+  text-transform: uppercase;
+}
+
 .submit-btn input[type="submit"] {
   cursor: pointer;
   font-size: 1.125rem;
@@ -13929,6 +13933,7 @@ form textarea {
   color: #000;
   background-color: #f0f0f0;
   text-align: center !important;
+  text-transform: uppercase;
 }
 
 .cmb2-wrap .custom_checkbox .cmb2-radio-list li input[type=checkbox][class*=cmb2-option]:checked + label,
@@ -14218,7 +14223,7 @@ span.cmb2-metabox-description {
 }
 
 .cmb-type-title {
-  height: 3.75rem;
+  height: 7.5rem;
   background-color: #f0f0f0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -14230,8 +14235,18 @@ span.cmb2-metabox-description {
 .cmb-type-title .cmb2-metabox-title {
   color: #000;
   font-weight: 600;
-  font-size: 1.375rem;
-  line-height: 3.75rem;
+  font-size: 1.875rem;
+  line-height: 7.5rem;
+}
+
+@media (max-width: 991px) {
+  .cmb-type-title {
+    height: 7.5rem;
+  }
+  .cmb-type-title .cmb2-metabox-title {
+    font-size: 1.375rem;
+    line-height: 7.5rem;
+  }
 }
 
 .cmb-inline ul {

@@ -158,7 +158,7 @@ function to_publish_frontend_form_register() {
 
     $cmb->add_field( array(
 		'default_cb'    => 'to_publish_maybe_set_default_from_posted_values',
-        'name'          => __( 'City', 'to_publish' ),
+        'name'          => __( 'City *', 'to_publish' ),
         'id'            => 'submitted_city', 
         'type'          => 'select', 
         'options_cb'    => 'show_city_options',

@@ -97,6 +97,7 @@ form{
 }
 
 .submit-btn{  
+	text-transform: uppercase;
 	input{
 		&[type="submit"]{
 			cursor:pointer;

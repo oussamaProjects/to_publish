@@ -161,7 +161,8 @@
  						font-weight: 700;
  						color: $main_text_color;
  						background-color: $second_main_color;
- 						text-align: center !important;
+						 text-align: center !important;
+						 text-transform: uppercase;
  					}
 
  					&[type=checkbox][class*=cmb2-option]:checked+label ,
@@ -443,7 +444,7 @@
 
 
 .cmb-type-title{
- 	height: oe_rem(60px);
+ 	height: oe_rem(120px);
 	background-color: $second_main_color;
 	@include oe_box-shadow-light;
 	&:first-child{
@@ -452,9 +453,18 @@
  	.cmb2-metabox-title {
  		color: $main-text-color;
  		font-weight: 600;
- 		font-size: oe_rem(22px);
- 		line-height: oe_rem(60px);
- 	}
+ 		font-size: oe_rem(30px);
+ 		line-height: oe_rem(120px);
+	 }
+	 
+	 @include media("<lg"){
+		height: oe_rem(120px);  
+		.cmb2-metabox-title { 
+			font-size: oe_rem(22px);
+			line-height: oe_rem(120px);
+		}
+
+	 }
  }
 
  .cmb-inline ul {
