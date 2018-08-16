@@ -33,10 +33,10 @@ function to_publish_slider_annonces( $atts ){
     $return .= '<div class="row">';
     $return .= '<div class="col-md-12">';
     $return .= '<div class="section_title">';
-    $return .= '<div class="div">'. __("Nouveautés","to_publish") .'</div>';
+    $return .= '<div class="div">'. __("New","to_publish") .'</div>';
     $return .= '</div>';
     $return .= '<div class="section_sousTitle">';
-    $return .= __("Découvrez toutes les dernières annonces","to_publish");
+    $return .= __("Check out the latest ads","to_publish");
     $return .= '</div>';
     $return .= '<div id="annoces_slider" class="annoces_slider owl-carousel owl-theme"> ';
 
@@ -44,7 +44,7 @@ function to_publish_slider_annonces( $atts ){
     foreach( $posts as $post ): setup_postdata( $post );
       
       $image = '';
-      $rooms  		= get_post_meta( get_the_ID(), 'submitted_rooms', true );
+      $bedrooms  	= get_post_meta( get_the_ID(), 'submitted_bedrooms', true );
       $bathrooms  = get_post_meta( get_the_ID(), 'submitted_bathrooms', true );
       $surface  	= get_post_meta( get_the_ID(), 'submitted_surface', true );
       $price  	  = get_post_meta( get_the_ID(), 'submitted_price', true );
@@ -64,10 +64,10 @@ function to_publish_slider_annonces( $atts ){
             $return .= '<div class="titre">'. get_the_title() .'</div>';
             $return .= '<div class="info">';
                             
-              if( $rooms ): 
+              if( $bedrooms ): 
                 $return .= '<div class="rooms">';
                 $return .= '<i class="fas fa-bed"></i>';
-                $return .= '<span>' . sprintf( _n('%d room', '%d rooms', $rooms, 'to_publish' ), $rooms ) . '</span>';
+                $return .= '<span>' . sprintf( _n('%d Bedroom', '%d Bedrooms', $bedrooms, 'to_publish' ), $bedrooms ) . '</span>';
                 $return .= ' </div>';
               endif;
 
@@ -92,7 +92,7 @@ function to_publish_slider_annonces( $atts ){
               $return .= '</div>';
 
             if( $price ):
-              $return .= '<div class="price">' . __("Price : ", "to_publish") . $price . 'dhs</div>';  
+              $return .= '<div class="price">' . __("Price : ", "to_publish") . number_format_int($price) . ' Dhs</div>';  
             endif;  
           
           $return .= '</div>';

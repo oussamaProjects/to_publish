@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-08-15 18:19+0100\n"
+"POT-Creation-Date: 2018-08-16 12:50+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,19 +68,18 @@ msgstr ""
 msgid "Number of bedrooms"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:92 public/partials/to_publish-form.php:132
+#: admin/partials/to_publish-form.php:92
 #, php-format
 msgid "%d bedroom"
 msgid_plural "%d bedrooms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: admin/partials/to_publish-form.php:99 public/partials/to_publish-form.php:140
+#: admin/partials/to_publish-form.php:99 public/partials/to_publish-form.php:141
 msgid "Number of bathrooms"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:111
-#: public/partials/to_publish-form.php:154
 #: public/shortcodes/to_publish-slider-annonces.php:77
 #: public/shortcodes/to_publish-slider-similar-annonces.php:93
 #, php-format
@@ -94,8 +93,6 @@ msgid "Rooms"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:130
-#: public/shortcodes/to_publish-slider-annonces.php:70
-#: public/shortcodes/to_publish-slider-similar-annonces.php:86
 #, php-format
 msgid "%d room"
 msgid_plural "%d rooms"
@@ -111,12 +108,12 @@ msgid "Price"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:162
-#: public/partials/to_publish-form.php:239
+#: public/partials/to_publish-form.php:243
 msgid "Your Name*"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:171
-#: public/partials/to_publish-form.php:252
+#: public/partials/to_publish-form.php:256
 msgid "Your Email*"
 msgstr ""
 
@@ -124,12 +121,12 @@ msgstr ""
 msgid "Phone*"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:189 includes/cmb2-functions.php:79
+#: admin/partials/to_publish-form.php:189 includes/cmb2-functions.php:87
 msgid "Phone 2"
 msgstr ""
 
 #: admin/partials/to_publish-form.php:195
-#: public/partials/to_publish-form.php:288
+#: public/partials/to_publish-form.php:292
 msgid "Message*"
 msgstr ""
 
@@ -141,7 +138,11 @@ msgstr ""
 msgid "mail"
 msgstr ""
 
-#: includes/cmb2-functions.php:72
+#: includes/cmb2-functions.php:73
+msgid "mail 2"
+msgstr ""
+
+#: includes/cmb2-functions.php:80
 msgid "Phone"
 msgstr ""
 
@@ -185,43 +186,51 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: public/partials/to_publish-form.php:161
+#: public/partials/to_publish-form.php:133
+#: public/partials/to_publish-form.php:155
+#, php-format
+msgid "%d"
+msgid_plural "%d"
+msgstr[0] ""
+msgstr[1] ""
+
+#: public/partials/to_publish-form.php:162
 msgid "City *"
 msgstr ""
 
-#: public/partials/to_publish-form.php:172
+#: public/partials/to_publish-form.php:173
 msgid "District"
 msgstr ""
 
-#: public/partials/to_publish-form.php:228
+#: public/partials/to_publish-form.php:232
 msgid "3. Your details"
 msgstr ""
 
-#: public/partials/to_publish-form.php:265
+#: public/partials/to_publish-form.php:269
 msgid "Your phone 1*"
 msgstr ""
 
-#: public/partials/to_publish-form.php:278
+#: public/partials/to_publish-form.php:282
 msgid "Your phone 2"
 msgstr ""
 
-#: public/partials/to_publish-form.php:297
+#: public/partials/to_publish-form.php:301
 msgid "* Required fields"
 msgstr ""
 
-#: public/partials/to_publish-form.php:329
+#: public/partials/to_publish-form.php:333
 msgid "Submit"
 msgstr ""
 
-#: public/partials/to_publish-form.php:341
+#: public/partials/to_publish-form.php:345
 msgid "Next > "
 msgstr ""
 
-#: public/partials/to_publish-form.php:352
+#: public/partials/to_publish-form.php:356
 msgid " < Previous"
 msgstr ""
 
-#: public/partials/to_publish-form.php:380
+#: public/partials/to_publish-form.php:384
 #, php-format
 msgid "<option value='%s'>%s</option>"
 msgstr ""
@@ -316,12 +325,20 @@ msgid "Submit Post"
 msgstr ""
 
 #: public/shortcodes/to_publish-slider-annonces.php:36
-msgid "Nouveautés"
+msgid "New"
 msgstr ""
 
 #: public/shortcodes/to_publish-slider-annonces.php:39
-msgid "Découvrez toutes les dernières annonces"
+msgid "Check out the latest ads"
 msgstr ""
+
+#: public/shortcodes/to_publish-slider-annonces.php:70
+#: public/shortcodes/to_publish-slider-similar-annonces.php:86
+#, php-format
+msgid "%d Bedroom"
+msgid_plural "%d Bedrooms"
+msgstr[0] ""
+msgstr[1] ""
 
 #: public/shortcodes/to_publish-slider-annonces.php:84
 #: public/shortcodes/to_publish-slider-similar-annonces.php:100

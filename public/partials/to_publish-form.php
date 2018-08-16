@@ -73,18 +73,6 @@ function to_publish_frontend_form_register() {
         'after_row'      => '</div></div>'
     ) );
 
-    // $cmb->add_field( array(
-	// 	'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
-    //     'name' => __( 'Titre*', 'to_publish' ),
-    //     'id'   => 'submitted_post_title',
-    //     'type' => 'text',
-    //     'attributes'  => array( 
-    //         'required'    => 'required',
-    //     ), 
-    //     'before_row'        => '<div class="container"><div class="row">',
-    //     'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
-    //     'after_row'         => '</div></div>'
-    // ) );
     
     $cmb->add_field( array(
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
@@ -119,6 +107,7 @@ function to_publish_frontend_form_register() {
         'id'               => 'submitted_bedrooms',
         'type'             => 'select',
         'show_option_none' => true,
+        'default'          => 'custom',
         'options_cb'       => 'bedrooms_options', 
         'before_row'       => '<div class="container"><div class="row">',
         'classes'          => 'col-lg-4 offset-lg-2 col-md-6', 
@@ -129,7 +118,7 @@ function to_publish_frontend_form_register() {
 
         $bedrooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
-            $bedrooms[$i] = sprintf( _n( '%d bedroom', '%d bedrooms', $i, 'to_publish' ), $i );
+            $bedrooms[$i] = sprintf( _n( '%d', '%d', $i, 'to_publish' ), $i );
         } 
         return $bedrooms;
 
@@ -151,7 +140,7 @@ function to_publish_frontend_form_register() {
 
         $bathrooms = array(); 
         for ( $i = 1; $i <= 10; $i++ ) {
-            $bathrooms[$i] = sprintf( _n( '%d bathroom', '%d bathrooms', $i, 'to_publish' ), $i );
+            $bathrooms[$i] = sprintf( _n( '%d', '%d', $i, 'to_publish' ), $i );
         } 
         return $bathrooms;
     }
