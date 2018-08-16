@@ -67,21 +67,21 @@ function to_publish_slider_annonces( $atts ){
               if( $bedrooms ): 
                 $return .= '<div class="rooms">';
                 $return .= '<i class="fas fa-bed"></i>';
-                $return .= '<span>' . sprintf( _n('%d Bedroom', '%d Bedrooms', $bedrooms, 'to_publish' ), $bedrooms ) . '</span>';
+                $return .= '<span>' . $bedrooms . '</span>';
                 $return .= ' </div>';
               endif;
 
               if( $bathrooms ):
                 $return .= '<div class="bathrooms">';
                 $return .= '<i class="fas fa-shower"></i>';
-                $return .= '<span>' . sprintf( _n( '%d bathroom', '%d bathrooms', $bathrooms, 'to_publish' ), $bathrooms ) . '</span>';
+                $return .= '<span>' . $bathrooms . '</span>';
                 $return .= '</div>';
               endif; 
 
               if( $surface ):
                 $return .= '<div class="surface">';
                 $return .= '<img src="' . plugin_dir_url( dirname( __FILE__ ) ) . 'img/svg/superficie.svg" alt="">';
-                $return .= '<span>' . sprintf( _n( '%d surface', '%d surfaces', $surface, 'to_publish' ), $surface ) .'</span>';
+                $return .= '<span>' . $surface  .' m<sup>2</sup></span>';
                 $return .= '</div>';
               endif; 
 
