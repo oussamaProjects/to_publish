@@ -38,18 +38,12 @@ function to_publish_admin_annonces_form_register() {
      * The parent field's id needs to be passed as the first argument.
      */
  
-    $cmb->add_group_field( $group_field_id, array(
-        'name' => __( 'Image', 'to_publish' ),
-        'id'   => 'submitted_images',
-        'type' => 'file',
-    ) );
 
 
     $cmb->add_field( array(
         'name'    =>  __( 'Plus', 'to_publish' ), 
         'id'      => 'plus',
-        'type'    => 'wysiwyg',
-        'options' => array(),
+        'type'    => 'wysiwyg', 
     ) );
 
 
@@ -163,7 +157,7 @@ function to_publish_admin_annonces_form_register() {
         'id'   => 'submitted_author_name',
         'type' => 'text',
         'attributes'  => array( 
-            'required'    => 'required',
+            // 'required'    => 'required',
         ),
     ) );
 
@@ -172,7 +166,7 @@ function to_publish_admin_annonces_form_register() {
         'id'   => 'submitted_author_email',
         'type' => 'text_email',
         'attributes'  => array( 
-            'required'    => 'required',
+            // 'required'    => 'required',
         ),
     ) );
 
@@ -181,7 +175,7 @@ function to_publish_admin_annonces_form_register() {
         'id'   => 'submitted_author_phone',
         'type' => 'text',
         'attributes'  => array( 
-            'required'    => 'required',
+            // 'required'    => 'required',
         )
     ) );
 
@@ -196,8 +190,8 @@ function to_publish_admin_annonces_form_register() {
         'id'   => 'submitted_message',
         'type' => 'textarea',
         'attributes'  => array( 
-            'required'  => 'required',
-            'row'       => 12
+            // 'required'    => 'required',
+            'row'         => 12
         ),
     ) );
 
@@ -209,6 +203,13 @@ function to_publish_admin_annonces_form_register() {
         'type' => 'pw_map',
         'split_values' => true, // Save latitude and longitude as two separate fields
     ));
+
+    
+    $cmb->add_group_field( $group_field_id, array(
+        'name' => __( 'Image', 'to_publish' ),
+        'id'   => 'submitted_images',
+        'type' => 'file',
+    ) );
 
 }
 add_action( 'cmb2_admin_init', 'to_publish_admin_annonces_form_register' );
