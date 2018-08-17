@@ -153,7 +153,7 @@ function to_publish_admin_annonces_form_register() {
     ) );
     
     $cmb->add_field( array(
-        'name' => __( 'Your Name*', 'to_publish' ),
+        'name' => __( 'Your Name', 'to_publish' ),
         'id'   => 'submitted_author_name',
         'type' => 'text',
         'attributes'  => array( 
@@ -162,7 +162,7 @@ function to_publish_admin_annonces_form_register() {
     ) );
 
     $cmb->add_field( array(
-        'name' => __( 'Your Email*', 'to_publish' ),
+        'name' => __( 'Your Email', 'to_publish' ),
         'id'   => 'submitted_author_email',
         'type' => 'text_email',
         'attributes'  => array( 
@@ -171,7 +171,7 @@ function to_publish_admin_annonces_form_register() {
     ) );
 
     $cmb->add_field( array(
-        'name' => __( 'Phone*', 'to_publish' ),
+        'name' => __( 'Phone', 'to_publish' ),
         'id'   => 'submitted_author_phone',
         'type' => 'text',
         'attributes'  => array( 
@@ -186,7 +186,7 @@ function to_publish_admin_annonces_form_register() {
     ) );
     
     $cmb->add_field( array(
-        'name' => __( 'Message*', 'to_publish' ),
+        'name' => __( 'Message', 'to_publish' ),
         'id'   => 'submitted_message',
         'type' => 'textarea',
         'attributes'  => array( 
