@@ -155,13 +155,13 @@ function to_publish_handle_frontend_new_post_form_submission() {
 
 
 	// create email headers
-	$headers = 'From: '.$email_from."\r<br>".
-	'Reply-To: '.$email_reply."\r<br>" .
+	$headers = 'From: '.$email_from."\r\n".
+	'Reply-To: '.$email_reply."\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 
 	// @mail($email_to, $email_subject, $email_message, $headers); 
 
-	wp_mail($email_to, $email_subject, $email_message, $headers);
+	wp_mail('matt@tanja-marina.com', $email_subject, $email_message, $headers);
 
 	/*
 	 * Redirect back to the form page with a query variable with the new post ID.
