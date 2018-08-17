@@ -13730,13 +13730,17 @@ form textarea {
   -ms-align-items: center;
   -ms-flex-align: center;
       align-items: center;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+.annoce_container .info_container .info > div {
+  padding-right: 1.25rem;
 }
 
 .annoce_container .info_container .info i {
@@ -14237,7 +14241,7 @@ span.cmb2-metabox-description {
 }
 
 .cmb-type-title .cmb2-metabox-title {
-  color: #000;
+  color: #01628d;
   font-weight: 600;
   font-size: 1.875rem;
   line-height: 7.5rem;

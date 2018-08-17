@@ -60,7 +60,10 @@
 			font-weight: 600;
 			font-size: oe_rem(14px);
 			color: $main_text_color;
-			@include flex(center, space-between, row);
+			@include flex(center, flex-start, row);
+			&>div{
+				padding-right: oe_rem(20px);
+			}
 			i{
 				color: $main_color;
 				padding-right: oe_rem(4px);
