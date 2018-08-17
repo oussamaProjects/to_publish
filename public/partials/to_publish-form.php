@@ -68,6 +68,7 @@ function to_publish_frontend_form_register() {
             'no_terms_text' => 'Sorry, no types could be found.' // Change default text. Default: "No terms"
         ), 
         'remove_default' => 'true', // Removes the default metabox provided by WP core. Pending release as of Aug-10-16
+        'show_option_none'  => false,
         'before_row'     => '<div class="container"><div class="row">',
         'classes'        => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'      => '</div></div>'
@@ -106,7 +107,7 @@ function to_publish_frontend_form_register() {
         'name'             => __( 'Number of bedrooms', 'to_publish' ),
         'id'               => 'submitted_bedrooms',
         'type'             => 'select',
-        'show_option_none' => true,
+        'show_option_none' => false,
         'default'          => 'custom',
         'options_cb'       => 'bedrooms_options', 
         'before_row'       => '<div class="container"><div class="row">',
@@ -129,7 +130,7 @@ function to_publish_frontend_form_register() {
         'name'              => __( 'Number of bathrooms', 'to_publish' ),
         'id'                => 'submitted_bathrooms',
         'type'              => 'select',
-        'show_option_none'  => true,
+        'show_option_none'  => false,
         'options_cb'        => 'bathrooms_options', 
         'classes'           => 'col-lg-4 col-md-6custom_checkbox',
         'after_row'         => '</div></div>'
@@ -177,6 +178,7 @@ function to_publish_frontend_form_register() {
         ); 
 
         $ads_cities = get_terms( $args_ads_city );
+        $cities[0] = __('Choose', 'to_publish');
         foreach ($ads_cities as $ads_city) {
             $cities[$ads_city->term_id] = $ads_city->name;
         } 

@@ -53,8 +53,9 @@ function to_publish_slider_annonces( $atts ){
         $return .= '<a href="' . get_the_permalink() .'" title="'. esc_attr( get_the_title() ) .'">';
           $return .= '<div class="annoce">';
           
-            if($image)
-              $return .= '<img src="' . esc_attr($image) . '" alt="" />';
+          $images = get_post_meta( get_the_ID(), 'submitted_slides', true );  
+          if($images)
+            $return .= '<img src="' . esc_attr($images[0][ 'submitted_images' ]) . '" alt="" />';
             else 
               $return .= '<img src="' . plugin_dir_url( dirname( __FILE__ ) ) . 'img/ads.jpg" alt="" />';
         

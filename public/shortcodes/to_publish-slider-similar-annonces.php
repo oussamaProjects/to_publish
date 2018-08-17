@@ -52,7 +52,7 @@ function to_publish_slider_similar_annonces( $atts ){
     $return .= '<div class="div">'. __("You might also like ...","to_publish") .'</div>';
     $return .= '</div>';
     $return .= '<div class="section_sousTitle">';
-    $return .= __("lorem","to_publish");
+    $return .= __("Discover our similar ads","to_publish");
     $return .= '</div>';
     $return .= '<div id="annoces_slider" class="annoces_slider owl-carousel owl-theme"> ';
 
@@ -69,8 +69,9 @@ function to_publish_slider_similar_annonces( $atts ){
         $return .= '<a href="' . get_the_permalink() .'" title="'. esc_attr( get_the_title() ) .'">';
           $return .= '<div class="annoce">';
           
-            if($image)
-              $return .= '<img src="' . esc_attr($image) . '" alt="" />';
+						$images = get_post_meta( get_the_ID(), 'submitted_slides', true );  
+            if($images)
+              $return .= '<img src="' . esc_attr($images[0][ 'submitted_images' ]) . '" alt="" />';
             else 
               $return .= '<img src="' . plugin_dir_url( dirname( __FILE__ ) ) . 'img/ads.jpg" alt="" />';
         

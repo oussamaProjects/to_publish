@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-08-16 12:50+0100\n"
+"POT-Creation-Date: 2018-08-17 16:40+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,94 +40,77 @@ msgstr ""
 msgid "Remove Entry"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:42
-msgid "Image"
-msgstr ""
-
-#: admin/partials/to_publish-form.php:49
+#: admin/partials/to_publish-form.php:44
 msgid "Plus"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:60 public/partials/to_publish-form.php:31
-msgid "Sell my property"
-msgstr ""
-
-#: admin/partials/to_publish-form.php:61 public/partials/to_publish-form.php:32
-msgid "Entrust my research"
-msgstr ""
-
-#: admin/partials/to_publish-form.php:62 public/partials/to_publish-form.php:33
-msgid "To estimate my property"
-msgstr ""
-
-#: admin/partials/to_publish-form.php:67 public/partials/to_publish-form.php:104
+#: admin/partials/to_publish-form.php:61 public/partials/to_publish-form.php:92
 msgid "Surface"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:80 public/partials/to_publish-form.php:118
+#: admin/partials/to_publish-form.php:74 public/partials/to_publish-form.php:106
 msgid "Number of bedrooms"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:92
+#: admin/partials/to_publish-form.php:86
 #, php-format
 msgid "%d bedroom"
 msgid_plural "%d bedrooms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: admin/partials/to_publish-form.php:99 public/partials/to_publish-form.php:141
+#: admin/partials/to_publish-form.php:93 public/partials/to_publish-form.php:129
 msgid "Number of bathrooms"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:111
-#: public/shortcodes/to_publish-slider-annonces.php:77
-#: public/shortcodes/to_publish-slider-similar-annonces.php:93
+#: admin/partials/to_publish-form.php:105
 #, php-format
 msgid "%d bathroom"
 msgid_plural "%d bathrooms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: admin/partials/to_publish-form.php:117
+#: admin/partials/to_publish-form.php:111
 msgid "Rooms"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:130
+#: admin/partials/to_publish-form.php:124
 #, php-format
 msgid "%d room"
 msgid_plural "%d rooms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: admin/partials/to_publish-form.php:136
+#: admin/partials/to_publish-form.php:130
 msgid "Floor"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:149
+#: admin/partials/to_publish-form.php:143
 msgid "Price"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:162
-#: public/partials/to_publish-form.php:243
-msgid "Your Name*"
+#: admin/partials/to_publish-form.php:156
+msgid "Your Name"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:171
-#: public/partials/to_publish-form.php:256
-msgid "Your Email*"
+#: admin/partials/to_publish-form.php:165
+msgid "Your Email"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:180
-msgid "Phone*"
+#: admin/partials/to_publish-form.php:174 includes/cmb2-functions.php:80
+msgid "Phone"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:189 includes/cmb2-functions.php:87
+#: admin/partials/to_publish-form.php:183 includes/cmb2-functions.php:87
 msgid "Phone 2"
 msgstr ""
 
-#: admin/partials/to_publish-form.php:195
-#: public/partials/to_publish-form.php:292
-msgid "Message*"
+#: admin/partials/to_publish-form.php:189
+msgid "Message"
+msgstr ""
+
+#: admin/partials/to_publish-form.php:209
+msgid "Image"
 msgstr ""
 
 #: includes/cmb2-functions.php:35
@@ -135,15 +118,11 @@ msgid "Theme Options"
 msgstr ""
 
 #: includes/cmb2-functions.php:65
-msgid "mail"
+msgid "E-mail"
 msgstr ""
 
 #: includes/cmb2-functions.php:73
-msgid "mail 2"
-msgstr ""
-
-#: includes/cmb2-functions.php:80
-msgid "Phone"
+msgid "E-mail 2"
 msgstr ""
 
 #: includes/cpt-annonces.php:9 includes/cpt-annonces.php:14
@@ -174,6 +153,18 @@ msgstr ""
 msgid "1. Your request"
 msgstr ""
 
+#: public/partials/to_publish-form.php:31
+msgid "Sell my property"
+msgstr ""
+
+#: public/partials/to_publish-form.php:32
+msgid "Entrust my research"
+msgstr ""
+
+#: public/partials/to_publish-form.php:33
+msgid "To estimate my property"
+msgstr ""
+
 #: public/partials/to_publish-form.php:52
 msgid "2. Description of the property"
 msgstr ""
@@ -182,55 +173,71 @@ msgstr ""
 msgid "Type*"
 msgstr ""
 
-#: public/partials/to_publish-form.php:91
+#: public/partials/to_publish-form.php:79
 msgid "Description"
 msgstr ""
 
-#: public/partials/to_publish-form.php:133
-#: public/partials/to_publish-form.php:155
+#: public/partials/to_publish-form.php:121
+#: public/partials/to_publish-form.php:143
 #, php-format
 msgid "%d"
 msgid_plural "%d"
 msgstr[0] ""
 msgstr[1] ""
 
-#: public/partials/to_publish-form.php:162
+#: public/partials/to_publish-form.php:150
 msgid "City *"
 msgstr ""
 
-#: public/partials/to_publish-form.php:173
+#: public/partials/to_publish-form.php:161
 msgid "District"
 msgstr ""
 
-#: public/partials/to_publish-form.php:232
+#: public/partials/to_publish-form.php:180
+msgid "Choose"
+msgstr ""
+
+#: public/partials/to_publish-form.php:221
 msgid "3. Your details"
 msgstr ""
 
-#: public/partials/to_publish-form.php:269
+#: public/partials/to_publish-form.php:232
+msgid "Your Name*"
+msgstr ""
+
+#: public/partials/to_publish-form.php:245
+msgid "Your Email*"
+msgstr ""
+
+#: public/partials/to_publish-form.php:258
 msgid "Your phone 1*"
 msgstr ""
 
-#: public/partials/to_publish-form.php:282
+#: public/partials/to_publish-form.php:271
 msgid "Your phone 2"
 msgstr ""
 
-#: public/partials/to_publish-form.php:301
+#: public/partials/to_publish-form.php:281
+msgid "Message*"
+msgstr ""
+
+#: public/partials/to_publish-form.php:290
 msgid "* Required fields"
 msgstr ""
 
-#: public/partials/to_publish-form.php:333
+#: public/partials/to_publish-form.php:322
 msgid "Submit"
 msgstr ""
 
-#: public/partials/to_publish-form.php:345
+#: public/partials/to_publish-form.php:334
 msgid "Next > "
 msgstr ""
 
-#: public/partials/to_publish-form.php:356
+#: public/partials/to_publish-form.php:345
 msgid " < Previous"
 msgstr ""
 
-#: public/partials/to_publish-form.php:384
+#: public/partials/to_publish-form.php:373
 #, php-format
 msgid "<option value='%s'>%s</option>"
 msgstr ""
@@ -332,22 +339,6 @@ msgstr ""
 msgid "Check out the latest ads"
 msgstr ""
 
-#: public/shortcodes/to_publish-slider-annonces.php:70
-#: public/shortcodes/to_publish-slider-similar-annonces.php:86
-#, php-format
-msgid "%d Bedroom"
-msgid_plural "%d Bedrooms"
-msgstr[0] ""
-msgstr[1] ""
-
-#: public/shortcodes/to_publish-slider-annonces.php:84
-#: public/shortcodes/to_publish-slider-similar-annonces.php:100
-#, php-format
-msgid "%d surface"
-msgid_plural "%d surfaces"
-msgstr[0] ""
-msgstr[1] ""
-
 #: public/shortcodes/to_publish-slider-annonces.php:95
 #: public/shortcodes/to_publish-slider-similar-annonces.php:112
 msgid "Price : "
@@ -362,5 +353,5 @@ msgid "You might also like ..."
 msgstr ""
 
 #: public/shortcodes/to_publish-slider-similar-annonces.php:55
-msgid "lorem"
+msgid "Discover our similar ads"
 msgstr ""

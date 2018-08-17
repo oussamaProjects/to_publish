@@ -62,7 +62,7 @@ function to_publish_register_theme_options_metabox() {
 	 * Prefix is not needed.
 	 */
 	$cmb_options->add_field( array(
-		'name'    => esc_html__( 'mail', 'cmb2' ),
+		'name'    => esc_html__( 'E-mail', 'cmb2' ),
 		'id'      => 'mail',
 		'type'    => 'text_email',
 		'default' => 'isabelle@tanja-marina.com',
@@ -70,7 +70,7 @@ function to_publish_register_theme_options_metabox() {
 
 	
 	$cmb_options->add_field( array(
-		'name'    => esc_html__( 'mail 2', 'cmb2' ),
+		'name'    => esc_html__( 'E-mail 2', 'cmb2' ),
 		'id'      => 'mail_2',
 		'type'    => 'text_email',
 		'default' => 'matt@tanja-marina.com',
