@@ -59,7 +59,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	$city 				= get_term_by( 'id', $_city, 'localisation' );
 	$_city_name 		= $city->name ; 
 
-	$district 			= get_term_by( 'id', $_districts, 'localisation' );
+	$district 			= get_term_by( 'id', $_district, 'localisation' );
 	$_district_name 	= $district->name ; 
 
 	if ($_type_request == "Sell my property" || $_type_request == "Vendre mon bien" ) {
@@ -118,45 +118,45 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		died($error_message);
 	}
 	
-	$email_message = __("Form details below.", "to_publish") . "\n\n";
+	$email_message = __("Form details below.", "to_publish") . "<br><br>";
 
 	if( isset($_type_name) && ! empty($_type_name) )
-		$email_message .= __("Type : ", "to_publish")				. clean_string($_type_name) 		. "\n";
+		$email_message .= __("Type : ", "to_publish")				. clean_string($_type_name) 		. "<br>";
 
 	if( isset($_description) && ! empty($_description) )
-		$email_message .= __("Description : ", "to_publish")		. clean_string($_description) 	. "\n";
+		$email_message .= __("Description : ", "to_publish")		. clean_string($_description) 	. "<br>";
 
 	if( isset($_surface) && ! empty($_surface) )
-		$email_message .= __("Surface : ", "to_publish")			. clean_string($_surface) 			. "\n";
+		$email_message .= __("Surface : ", "to_publish")			. clean_string($_surface) 			. "<br>";
 
 	if( isset($_bedrooms) && ! empty($_bedrooms) )
-		$email_message .= __("Bedrooms : ", "to_publish")			. clean_string($_bedrooms) 		. "\n";
+		$email_message .= __("Bedrooms : ", "to_publish")			. clean_string($_bedrooms) 		. "<br>";
 
 	if( isset($_bathrooms) && ! empty($_bathrooms) )
-		$email_message .= __("Bathrooms : ", "to_publish")			. clean_string($_bathrooms) 		. "\n";
+		$email_message .= __("Bathrooms : ", "to_publish")			. clean_string($_bathrooms) 		. "<br>";
 
 	if( isset($_city_name) && ! empty($_city_name) )
-		$email_message .= __("City : ", "to_publish")				. clean_string($_city_name) 		. "\n";
+		$email_message .= __("City : ", "to_publish")				. clean_string($_city_name) 		. "<br>";
 
 	if( isset($_district_name) && ! empty($_district_name) )
-		$email_message .= __("District : ", "to_publish")			. clean_string($_district_name) 	. "\n";
+		$email_message .= __("District : ", "to_publish")			. clean_string($_district_name) 	. "<br>";
 
 	if( isset($_author_name) && ! empty($_author_name) )
-		$email_message .= __("Name : ", "to_publish") 				. clean_string($_author_name) 	. "\n";
+		$email_message .= __("Name : ", "to_publish") 				. clean_string($_author_name) 	. "<br>";
 
 	if( isset($_author_phone) && ! empty($_author_phone) )
-		$email_message .= __("Phone : ", "to_publish")				. clean_string($_author_phone) 	. "\n";
+		$email_message .= __("Phone : ", "to_publish")				. clean_string($_author_phone) 	. "<br>";
 
 	if( isset($_author_phone_2) && ! empty($_author_phone_2) )
-		$email_message .= __("Phone 2 : ", "to_publish")			. clean_string($_author_phone_2) . "\n";
+		$email_message .= __("Phone 2 : ", "to_publish")			. clean_string($_author_phone_2) . "<br>";
 
 	if( isset($_message) && ! empty($_message) )
-		$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "\n";
+		$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "<br>";
 
 
 	// create email headers
-	$headers = 'From: '.$email_from."\r\n".
-	'Reply-To: '.$email_reply."\r\n" .
+	$headers = 'From: '.$email_from."\r<br>".
+	'Reply-To: '.$email_reply."\r<br>" .
 	'X-Mailer: PHP/' . phpversion();
 
 	// @mail($email_to, $email_subject, $email_message, $headers); 
