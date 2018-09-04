@@ -76,7 +76,13 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		// Set our post data arguments
 		$post_data['post_title']   = $_type_request;
 		unset( $sanitized_values['submitted_post_title'] );
-		$post_data['post_content'] = $sanitized_values['submitted_description'];
+		
+		if ($sanitized_values['submitted_description'] == "") {
+			$post_data['post_content'] = "?";
+		}else {
+			$post_data['post_content'] = $sanitized_values['submitted_description'];
+		}
+
 		unset( $sanitized_values['submitted_description'] );
 
 		// Create the new post
