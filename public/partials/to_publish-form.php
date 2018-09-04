@@ -118,7 +118,7 @@ function to_publish_frontend_form_register() {
     function bedrooms_options( $field ) {
 
         $bedrooms = array(); 
-        for ( $i = 1; $i <= 10; $i++ ) {
+        for ( $i = 0; $i <= 10; $i++ ) {
             $bedrooms[$i] = sprintf( _n( '%d', '%d', $i, 'to_publish' ), $i );
         } 
         return $bedrooms;
@@ -140,7 +140,7 @@ function to_publish_frontend_form_register() {
     function bathrooms_options( $field ) {
 
         $bathrooms = array(); 
-        for ( $i = 1; $i <= 10; $i++ ) {
+        for ( $i = 0; $i <= 10; $i++ ) {
             $bathrooms[$i] = sprintf( _n( '%d', '%d', $i, 'to_publish' ), $i );
         } 
         return $bathrooms;
@@ -161,12 +161,22 @@ function to_publish_frontend_form_register() {
 		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
         'name'           => __( 'District', 'to_publish' ),
         'id'             => 'submitted_district',
-        'type'          => 'select', 
-        'options_cb'    => 'show_district_options',
+        'type'          => 'text',  
         'before_row'        => '<div class="container"><div class="row">',
         'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'         => '</div></div>'
     ) );
+
+    // $cmb->add_field( array(
+	// 	'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+    //     'name'           => __( 'District', 'to_publish' ),
+    //     'id'             => 'submitted_district',
+    //     'type'          => 'select', 
+    //     'options_cb'    => 'show_district_options',
+    //     'before_row'        => '<div class="container"><div class="row">',
+    //     'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
+    //     'after_row'         => '</div></div>'
+    // ) );
     
     function show_city_options( $field ) { 
 
@@ -178,7 +188,7 @@ function to_publish_frontend_form_register() {
         ); 
 
         $ads_cities = get_terms( $args_ads_city );
-        $cities[0] = __('Choose', 'to_publish');
+        // $cities[0] = __('Choose', 'to_publish');
         foreach ($ads_cities as $ads_city) {
             $cities[$ads_city->term_id] = $ads_city->name;
         } 

@@ -59,8 +59,18 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	$city 				= get_term_by( 'id', $_city, 'localisation' );
 	$_city_name 		= $city->name ; 
 
-	$district 			= get_term_by( 'id', $_district, 'localisation' );
-	$_district_name 	= $district->name ; 
+	$_district_name 	= $_district ; 
+
+
+	$parent_term = term_exists( $_city_name, 'localisation' ); // array is returned if taxonomy is given
+
+	wp_insert_term(
+		$_district_name, // the term 
+		'localisation', // the taxonomy
+		array( 
+			'parent'=> $parent_term['term_id']  // get numeric term id
+		)
+	);
 
 	if ($_type_request == "Sell my property" || $_type_request == "Vendre mon bien" ) {
 		// Set our post data arguments

@@ -74,7 +74,6 @@ function to_publish_admin_annonces_form_register() {
         'name'             => __( 'Number of bedrooms', 'to_publish' ),
         'id'               => 'submitted_bedrooms',
         'type'             => 'select',
-        'show_option_none' => true,
         'options_cb'        => 'admin_bedrooms_options', 
     ) );
 
@@ -82,7 +81,7 @@ function to_publish_admin_annonces_form_register() {
     function admin_bedrooms_options( $field ) {
 
         $bedrooms = array(); 
-        for ( $i = 1; $i <= 10; $i++ ) {
+        for ( $i = 0; $i <= 10; $i++ ) {
             $bedrooms[$i] = sprintf( _n( '%d bedroom', '%d bedrooms', $i, 'to_publish' ), $i );
         } 
         return $bedrooms;
@@ -93,7 +92,6 @@ function to_publish_admin_annonces_form_register() {
         'name'             => __( 'Number of bathrooms', 'to_publish' ),
         'id'               => 'submitted_bathrooms',
         'type'             => 'select',
-        'show_option_none' => true,
         'options_cb'       => 'admin_bathrooms_options', 
     ) );
 
@@ -101,7 +99,7 @@ function to_publish_admin_annonces_form_register() {
     function admin_bathrooms_options( $field ) {
 
         $bathrooms = array(); 
-        for ( $i = 1; $i <= 10; $i++ ) {
+        for ( $i = 0; $i <= 10; $i++ ) {
             $bathrooms[$i] = sprintf( _n( '%d bathroom', '%d bathrooms', $i, 'to_publish' ), $i );
         } 
         return $bathrooms;
@@ -111,7 +109,6 @@ function to_publish_admin_annonces_form_register() {
         'name' => __( 'Rooms', 'to_publish' ),
         'id'   => 'submitted_rooms',
         'type' => 'select',
-        'show_option_none' => true,
         'options_cb'        => 'admin_rooms_options', 
     ) );
 
@@ -120,7 +117,7 @@ function to_publish_admin_annonces_form_register() {
     function admin_rooms_options( $field ) {
 
         $rooms = array(); 
-        for ( $i = 1; $i <= 10; $i++ ) {
+        for ( $i = 0; $i <= 10; $i++ ) {
             $rooms[$i] = sprintf( _n( '%d room', '%d rooms', $i, 'to_publish' ), $i );
         } 
         return $rooms;
@@ -133,10 +130,7 @@ function to_publish_admin_annonces_form_register() {
         'attributes' => array(
             'type' => 'number',
             'pattern' => '\d*',
-        ), 
-        'attributes'  => array( 
-            'required'    => 'required',
-        ),
+        ),  
     ) );
 
     $cmb->add_field( array(
