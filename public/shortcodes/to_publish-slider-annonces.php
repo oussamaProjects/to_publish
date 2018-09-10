@@ -25,7 +25,7 @@ function to_publish_slider_annonces( $atts ){
     'numberposts' => $limit,
     'post_status' => $status,
   );
-
+  
   $posts = get_posts( $args );
   if( count($posts) ):
     $return .= '<section>';
@@ -109,7 +109,7 @@ function to_publish_slider_annonces( $atts ){
     $return .= '</section>';
 
   else :
-    $return .= '<p>' . _("No posts found.", "to_publish") .'</p>';
+    $return .= '<p>' . __("No posts found.", "to_publish") .'</p>';
   endif;
 
   
