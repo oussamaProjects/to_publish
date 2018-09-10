@@ -37,7 +37,6 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	 * Fetch sanitized values
 	 */
 	$sanitized_values = $cmb->get_sanitized_values( $_POST );
-
 	
 	$_type_request 	= $sanitized_values['submitted_type_request'];
 	$_types 				= $sanitized_values['submitted_types'];
@@ -72,15 +71,23 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		)
 	);
 
+	$new_submission_id = 123;
 	if ($_type_request == "Sell my property" || $_type_request == "Vendre mon bien" ) {
 		// Set our post data arguments
 		$post_data['post_title']   = $_type_request;
 		unset( $sanitized_values['submitted_post_title'] );
-		$post_data['post_content'] = $sanitized_values['submitted_description'];
+		
+		if ($sanitized_values['submitted_description'] == "") {
+			$post_data['post_content'] = "?";
+		}else {
+			$post_data['post_content'] = $sanitized_values['submitted_description'];
+		}
+
 		unset( $sanitized_values['submitted_description'] );
 
 		// Create the new post
-		$new_submission_id = wp_insert_post( $post_data, true );
+		// $new_submission_id = 
+		wp_insert_post( $post_data, true );
 
 		// If we hit a snag, update the user
 		if ( is_wp_error( $new_submission_id ) ) {
@@ -163,20 +170,21 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	if( isset($_message) && ! empty($_message) )
 		$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "<br>";
 
-
-	// create email headers
-	$headers = 'From: '.$email_from."\r\n".
+		
+		// create email headers
+		$headers = 'From: '.$email_from."\r\n".
 	'Reply-To: '.$email_reply."\r\n" .
 	'X-Mailer: PHP/' . phpversion();
-
+	
 	// @mail($email_to, $email_subject, $email_message, $headers); 
-
-	wp_mail('oussama@comenscene.com', $email_subject, $email_message, $headers);
-
+ 
+	
+	wp_mail('matt@tanja-marina.com', $email_subject, $email_message, $headers);
+	 
 	/*
-	 * Redirect back to the form page with a query variable with the new post ID.
-	 * This will help double-submissions with browser refreshes
-	 */
+	* Redirect back to the form page with a query variable with the new post ID.
+	* This will help double-submissions with browser refreshes
+	*/ 
 	wp_redirect( esc_url_raw( add_query_arg( 'post_submitted', $new_submission_id ) ) );
 	exit;
 }

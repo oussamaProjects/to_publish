@@ -80,7 +80,8 @@ function to_publish_frontend_form_register() {
         'name' => __( 'Description', 'to_publish' ),
         'id'   => 'submitted_description',
         'type' => 'textarea',
-        'attributes'  => array(  
+        'attributes'  => array( 
+            'required'  => 'required', 
             'row'       => 8
         ),
         'before_row'    => '<div class="container"><div class="row">',
