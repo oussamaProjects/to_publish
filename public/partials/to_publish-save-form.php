@@ -50,6 +50,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	$_author_email 	= $sanitized_values['submitted_author_email'];
 	$_author_phone 	= $sanitized_values['submitted_author_phone'];
 	$_author_phone_2 	= $sanitized_values['submitted_author_phone_2'];
+	$_author_country 	= $sanitized_values['submitted_author_country'];
 	$_message 			= $sanitized_values['submitted_message'];
 
 	$type 				= get_term_by( 'slug', $_types, 'types' );
@@ -164,8 +165,8 @@ function to_publish_handle_frontend_new_post_form_submission() {
 	if( isset($_author_phone) && ! empty($_author_phone) )
 		$email_message .= __("Phone : ", "to_publish")				. clean_string($_author_phone) 	. "<br>";
 
-	if( isset($_author_phone_2) && ! empty($_author_phone_2) )
-		$email_message .= __("Phone 2 : ", "to_publish")			. clean_string($_author_phone_2) . "<br>";
+	if( isset($_author_country) && ! empty($_author_country) )
+		$email_message .= __("Country : ", "to_publish")			. clean_string($_author_country) . "<br>";
 
 	if( isset($_message) && ! empty($_message) )
 		$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "<br>";
