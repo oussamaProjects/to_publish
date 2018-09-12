@@ -178,6 +178,13 @@ function to_publish_admin_annonces_form_register() {
         'id'   => 'submitted_author_phone_2',
         'type' => 'text'
     ) );
+
+    
+    $cmb->add_field( array( 
+        'name' => __( 'Country', 'to_publish' ),
+        'id'   => 'submitted_author_country',
+        'type' => 'text'
+    ) );
     
     $cmb->add_field( array(
         'name' => __( 'Message', 'to_publish' ),

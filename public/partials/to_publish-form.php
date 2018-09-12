@@ -96,6 +96,7 @@ function to_publish_frontend_form_register() {
         'type' => 'text', 
         'attributes' => array(
             'type' => 'number',
+			'min' => '0',
             'pattern' => '\d*',
         ), 
         'before_row'    => '<div class="container"><div class="row">',
@@ -283,6 +284,19 @@ function to_publish_frontend_form_register() {
         'name' => __( 'Your phone 2', 'to_publish' ),
         'id'   => 'submitted_author_phone_2',
         'type' => 'text',
+        'before_row'        => '<div class="container"><div class="row">',
+        'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
+        'after_row'         => '</div></div>'
+    ) );
+
+    $cmb->add_field( array(
+		'default_cb' => 'to_publish_maybe_set_default_from_posted_values',
+        'name' => __( 'Country*', 'to_publish' ),
+        'id'   => 'submitted_author_country',
+        'type' => 'text',
+        'attributes'  => array( 
+            'required'    => 'required',
+        ),
         'before_row'        => '<div class="container"><div class="row">',
         'classes'       => 'col-lg-8 offset-lg-2 col-md-12',
         'after_row'         => '</div></div>'
