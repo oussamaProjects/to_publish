@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-09-12 12:10+0100\n"
+"POT-Creation-Date: 2018-09-12 14:40+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -299,23 +299,23 @@ msgid "Phone : "
 msgstr ""
 
 #: public/partials/to_publish-save-form.php:168
-msgid "Phone 2 : "
+msgid "Country : "
 msgstr ""
 
 #: public/partials/to_publish-save-form.php:171
 msgid "Message : "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:196
+#: public/partials/to_publish-save-form.php:198
 msgid ""
 "We are very sorry, but there were error(s) found with the form you submitted. "
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:197
+#: public/partials/to_publish-save-form.php:199
 msgid "These errors appear below."
 msgstr ""
 
-#: public/partials/to_publish-save-form.php:199
+#: public/partials/to_publish-save-form.php:201
 msgid "Please go back and fix these errors."
 msgstr ""
 
@@ -325,10 +325,9 @@ msgid "There was an error in the submission: %s"
 msgstr ""
 
 #: public/shortcodes/to_publish-form.php:48
-#, php-format
 msgid ""
-"Thank you%s, your new post has been submitted and is pending review by a site "
-"administrator."
+"We have taken into account your request. We will contact you as soon as "
+"possible."
 msgstr ""
 
 #: public/shortcodes/to_publish-form.php:51

@@ -87,8 +87,7 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		unset( $sanitized_values['submitted_description'] );
 
 		// Create the new post
-		// $new_submission_id = 
-		wp_insert_post( $post_data, true );
+		$new_submission_id = wp_insert_post( $post_data, true );
 
 		// If we hit a snag, update the user
 		if ( is_wp_error( $new_submission_id ) ) {
