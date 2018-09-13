@@ -172,9 +172,8 @@ function to_publish_handle_frontend_new_post_form_submission() {
 		$email_message .= __("Message : ", "to_publish")			. clean_string($_message) 			. "<br>";
 
 		
-	// create email headers
-	$headers = 'Content-type: text/html;charset=utf-8' . "\r\n";
-	$headers = 'From: '.$email_from."\r\n".
+		// create email headers
+		$headers = 'From: '.$email_from."\r\n".
 	'Reply-To: '.$email_reply."\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 	
