@@ -31,7 +31,7 @@
  
 	$(function() { 
 
-		$(".alert").delay(4000).fadeOut(500);
+		// $(".alert").delay(4000).fadeOut(500);
 
 
 		// if ( $('#submitted_city') ) {

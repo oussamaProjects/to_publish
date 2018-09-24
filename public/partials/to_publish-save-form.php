@@ -172,9 +172,10 @@ function to_publish_handle_frontend_new_post_form_submission() {
 
 		
 		// create email headers
-		$headers = 'From: '.$email_from."\r\n".
-	'Reply-To: '.$email_reply."\r\n" .
-	'X-Mailer: PHP/' . phpversion();
+		$headers = 'Content-type: text/html;charset=utf-8' . "\r\n";
+		$headers .= 'From: '.$email_from."\r\n".
+		'Reply-To: '.$email_reply."\r\n" .
+		'X-Mailer: PHP/' . phpversion();
 	
 	// @mail($email_to, $email_subject, $email_message, $headers); 
  
